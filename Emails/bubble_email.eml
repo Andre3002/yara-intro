@@ -1,0 +1,354 @@
+Delivered-To: afowlk1@gmail.com
+Received: by 2002:a05:7108:9d0d:b0:3ef:e8e9:2e7d with SMTP id gu13csp1276984gdb;
+        Wed, 16 Apr 2025 06:58:24 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFVHZuPeT/hu5yQ5zupVlgm6mBHYyTCwD6EFA+sW4wQZWICcMOCXDKxGby5OwvqNEET995z
+X-Received: by 2002:a05:6902:1025:b0:e6d:e693:4110 with SMTP id 3f1490d57ef6-e7275455aeamr2261775276.0.1744811904352;
+        Wed, 16 Apr 2025 06:58:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1744811904; cv=none;
+        d=google.com; s=arc-20240605;
+        b=KuCfzmVQNEFO44CQ/3t6Cw16NZVsbyL73Y8RVDqVSfCqUzZsQnPHeLSGV8YhnxNHCU
+         9MLTnHiwuoDR5mmVtVVRxcQGiLKf9MBUAQxZB+QqRX29HSSJNSgxPrA69gBWHYZGWkyY
+         HtJVLHVObH3Wxwe7kRcqk+kSF5j0BNm/dJJwjjMlnOxZHAXCl5KJ7LQPyo0wHaio/L0q
+         xWzblB8jfA1Jy91i3ojHTibX7Xk4f8XvJsdn2WaNAYV0SQWLgMC6OdQhMyX/SCkUtnF5
+         PxLrGkdQIb7+TgU5YdQn1PkuEghNpEBR3GUxadfr4nJstqxOcMbx7r4w9y1guS+Wkr3x
+         xyDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:feedback-id:message-id:to:subject:from
+         :dkim-signature:dkim-signature;
+        bh=z6nx7UBwL6zaQNb6AScLAAlaVhuYPfoIl4ZeU67+Tqs=;
+        fh=BgEBVK8QsvOJubZincWIkanU+VRWf/U7HN+3IbiOrYI=;
+        b=Gdjnodkj510ampj/HeGt4UvdcG4BjAxaUqnPJpQCpiF+nRbIjhlkPZ09Bu2WVur+5l
+         nQ5npYHBmgf8hKywvctZvLLXM3CMbMVDClfgiRjweHMCQewV2dnID+oWydJlDzqiYwf1
+         nbgJVNrhONN6APpVhUnaCIfvJyvNnS3D/u9r+hiPnmpkgKCThWlSNgntE3sZ3mBdydYa
+         S1bT8DsZkX50m4Q5k3KZGrGZvNoDvhza+1lASb2S9lWWCvaoBudtw0KzRJmqp7LroDBX
+         mWCfNZsCPGZo7nqFyVhf7rqtHorBRQO63qw8KDSZLQeUknhXV3n0B8mToR/pxc53JmVN
+         7KZA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mandrillapp.com header.s=mte1 header.b=oFEVNfDl;
+       dkim=pass header.i=@brilliantmade.com header.s=mandrill header.b=YJPfKB61;
+       spf=pass (google.com: domain of bounce-md_31127050.67ffb780.v1-30c015ed1d294b64a883d1b924d58fe2@mclicks.brilliantmade.com designates 198.2.178.23 as permitted sender) smtp.mailfrom=bounce-md_31127050.67ffb780.v1-30c015ed1d294b64a883d1b924d58fe2@mclicks.brilliantmade.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=brilliantmade.com
+Return-Path: <bounce-md_31127050.67ffb780.v1-30c015ed1d294b64a883d1b924d58fe2@mclicks.brilliantmade.com>
+Received: from mail178-23.suw51.mandrillapp.com (mail178-23.suw51.mandrillapp.com. [198.2.178.23])
+        by mx.google.com with ESMTPS id 3f1490d57ef6-e7032845887si16902311276.580.2025.04.16.06.58.24
+        for <afowlk1@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 16 Apr 2025 06:58:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_31127050.67ffb780.v1-30c015ed1d294b64a883d1b924d58fe2@mclicks.brilliantmade.com designates 198.2.178.23 as permitted sender) client-ip=198.2.178.23;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mandrillapp.com header.s=mte1 header.b=oFEVNfDl;
+       dkim=pass header.i=@brilliantmade.com header.s=mandrill header.b=YJPfKB61;
+       spf=pass (google.com: domain of bounce-md_31127050.67ffb780.v1-30c015ed1d294b64a883d1b924d58fe2@mclicks.brilliantmade.com designates 198.2.178.23 as permitted sender) smtp.mailfrom=bounce-md_31127050.67ffb780.v1-30c015ed1d294b64a883d1b924d58fe2@mclicks.brilliantmade.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=brilliantmade.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com;
+	s=mte1; t=1744811904; x=1745081904;
+	bh=z6nx7UBwL6zaQNb6AScLAAlaVhuYPfoIl4ZeU67+Tqs=;
+	h=From:Subject:To:Message-Id:Feedback-ID:Date:MIME-Version:
+	 Content-Type:CC:Date:Subject:From;
+	b=oFEVNfDlvAre2naWto0Y/a4RsV8yHUX+CQWdKWyd9zv9LcxeP37/wuMrJ/O8JSpiA
+	 GxbkC1aTGKZ3IhUNLbPaR0wkGvMtfW1fOXHvByopOAfm0fqQr3LiGE6LRerc9boVjF
+	 OOpXKY/bfoiLnagT79b4Mmk6mcCDul5yJGNVoimh/Peh+FuanB6qRdT786ns6ZR4ky
+	 391K2xJ/GW1kmOMHM2ssCxooH9iAgTDCGnF44ag9/64pBTOy8JLtBgEUpRmp/U2NeB
+	 eKt9Ht0Dmxu3CUAcA0aNfDb7kW9pBDcLDs+BxT1NQxk/cE2C6SP1cOBxgrZxEHZwlV
+	 5ogT2NxmJozUw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=brilliantmade.com;
+	s=mandrill; t=1744811904; x=1745072404; i=support@brilliantmade.com;
+	bh=z6nx7UBwL6zaQNb6AScLAAlaVhuYPfoIl4ZeU67+Tqs=;
+	h=From:Subject:To:Message-Id:Feedback-ID:Date:MIME-Version:
+	 Content-Type:CC:Date:Subject:From;
+	b=YJPfKB61v3JLxnDzL+PwJ4KoyNSZ3HeY6qTKkLYWi4bbgFWVT/tPxq6fQGZnwXTdW
+	 3hXAoFNzz4DQyVKt08KVBp/QKm07Ljh3zDnpmgqVKDAha+hVzV1uaxlH6+5CgnG2uy
+	 p9cYoG08n6S25pzdnBcrBJakDj0UJdSvFSq7vS+E=
+Received: from pmta13.mandrill.prod.suw01.rsglab.com (localhost [127.0.0.1])
+	by mail178-23.suw51.mandrillapp.com (Mailchimp) with ESMTP id 4Zd2g41hZYz35klNZ
+	for <afowlk1@gmail.com>; Wed, 16 Apr 2025 13:58:24 +0000 (GMT)
+From: "Bubble EU Store" <support@brilliantmade.com>
+Subject: =?utf-8?Q?Bubble=20EU=20Store=20Order=20#804055=20-=20Confirmed?=
+Received: from [3.225.121.233] by mandrillapp.com id 30c015ed1d294b64a883d1b924d58fe2; Wed, 16 Apr 2025 13:58:24 +0000
+To: afowlk1@gmail.com
+Message-Id: <67ffb77fb8d3f_1d021e645481e@ip-172-16-3-99.ec2.internal.mail>
+X-Native-Encoded: 1
+X-Report-Abuse: =?UTF-8?Q?Please=20forward=20a=20copy=20of=20this=20message,=20including=20all=20headers,=20to=20abuse@mandrill.com.=20You=20can=20also=20report=20abuse=20here:=20https://mandrillapp.com/contact/abuse=3Fid=3D31127050.30c015ed1d294b64a883d1b924d58fe2?=
+X-Mandrill-User: md_31127050
+Feedback-ID: 31127050:31127050.20250416:md
+Date: Wed, 16 Apr 2025 13:58:24 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-Mp19B04TRHRZ6H8vjAHjRQ"
+
+--_av-Mp19B04TRHRZ6H8vjAHjRQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Bubble - Bubble EU Store ( https://eu.store.bubble.io/ )
+
+Hi Andre,
+
+Thanks for your order! Your confirmation is below.
+
+We'll send an email with tracking information when your order
+ships. Please note that our fulfillment timelines vary. Click
+here 
+( https://help.brilliantmade.com/article/180-storefront-order-faqs )
+
+to learn more.
+
+View or Manage Order
+( https://brilliantmade.com/orders/804055 )
+
+If the above button is not working, copy/paste this URL into your
+browser:
+
+https://brilliantmade.com/orders/804055
+
+Feel free to reply to this email with any questions.
+
+Cheers,
+
+Bubble EU Store
+via Brilliant
+
+Order 804055
+------------
+
+Ordered by Andre Fowlkes
+
+Ship to:
+Andre Fowlkes
+Rua Eusebio Ferreira 42
+AP 421
+Carcavelos,  2775-403 PT
+
+Hotfix Mug
+
+x 1
+
+$30.00
+
+Subtotal
+
+$30.00
+
+Shipping
+
+$17.35
+
+Total
+
+$47.35
+
+$47.35 via gift_card (payment id 633925)
+
+Brilliant ( https://brilliantmade.com/ )
+
+1605 S Waukegan, Waukegan, IL
+
+--_av-Mp19B04TRHRZ6H8vjAHjRQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w=
+3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+
+</head>
+<body>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:=
+ 100%;">
+<tr>
+<td colspan=3D"3" style=3D"padding: 15px 0px;" align=3D"center">
+<a href=3D"http://mclicks.brilliantmade.com/track/click/31127050/eu.store.b=
+ubble.io?p=3DeyJzIjoiWUZDeFg4WjhWeWpqdFFGQlNtc0owaDdKSXFFIiwidiI6MiwicCI6In=
+tcInVcIjozMTEyNzA1MCxcInZcIjoyLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2V1LnN0b3JlL=
+mJ1YmJsZS5pb1xcXC9cIixcImlkXCI6XCIzMGMwMTVlZDFkMjk0YjY0YTg4M2QxYjkyNGQ1OGZl=
+MlwiLFwidXJsX2lkc1wiOltcIjViNzdmMzA2ODExMmRiOGJmMDQ0MmMzNjcxNTg4ZGI4N2VhMWY=
+0NWZcIl0sXCJtc2dfdHNcIjoxNzQ0ODExOTA0fSJ9" style=3D"color: #009DE6 !importa=
+nt; font-weight: 500; text-decoration: none;">
+<img alt=3D"Bubble - Bubble EU Store" src=3D"https://images.brilliantmade.c=
+om/uploads/store/logo/2887/png_logo3.png" width=3D"200">
+</a>
+</td>
+</tr>
+<tr>
+<td style=3D"min-width: 30px;" bgcolor=3D"#fff">
+=C2=A0
+</td>
+<td style=3D"font-family: 'Roboto', Roboto, sans-serif; width: 546px; font-=
+size: 15px; line-height: 150%; padding: 15px;">
+<p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">Hi Andr=
+e,</p>
+<p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">
+Thanks for your order! Your confirmation is below.
+<br>
+<br>
+We'll send an email with tracking information when your order ships. Please=
+ note that our fulfillment timelines vary. Click
+<a target=3D"_blank" rel=3D"noopener" href=3D"http://mclicks.brilliantmade.=
+com/track/click/31127050/help.brilliantmade.com?p=3DeyJzIjoiYjVEMnZGcEo4MXR=
+jcWFScWdhQmtjUUxKazVNIiwidiI6MiwicCI6IntcInVcIjozMTEyNzA1MCxcInZcIjoyLFwidX=
+JsXCI6XCJodHRwczpcXFwvXFxcL2hlbHAuYnJpbGxpYW50bWFkZS5jb21cXFwvYXJ0aWNsZVxcX=
+C8xODAtc3RvcmVmcm9udC1vcmRlci1mYXFzXCIsXCJpZFwiOlwiMzBjMDE1ZWQxZDI5NGI2NGE4=
+ODNkMWI5MjRkNThmZTJcIixcInVybF9pZHNcIjpbXCJlYjk4ZjY2N2NjNjNhNTE5YTE2YjNkYzg=
+1YTY1YjE2ODFkNDA1NzljXCJdLFwibXNnX3RzXCI6MTc0NDgxMTkwNH0ifQ" style=3D"color=
+: #009DE6 !important; font-weight: 500; text-decoration: none;">here</a>
+to learn more.
+</p>
+<div class=3D"wrapper">
+
+      <div>
+        <!--[if mso]>
+        <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"
+          xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+          href=3D"https://brilliantmade.com/orders/804055"
+          style=3D"height:38px;v-text-anchor:middle;width:200px;"
+          arcsize=3D"20%"
+          stroke=3D"f"
+          fillcolor=3D"#00bce6">
+          <w:anchorlock/>
+          <center>
+        <![endif]-->
+        <a class=3D"mailer-button" href=3D"http://mclicks.brilliantmade.com=
+/track/click/31127050/brilliantmade.com?p=3DeyJzIjoiOUhuVXRxQXRqbVNMd3V3NDF=
+qbS1PODRTYjdNIiwidiI6MiwicCI6IntcInVcIjozMTEyNzA1MCxcInZcIjoyLFwidXJsXCI6XC=
+JodHRwczpcXFwvXFxcL2JyaWxsaWFudG1hZGUuY29tXFxcL29yZGVyc1xcXC84MDQwNTVcIixcI=
+mlkXCI6XCIzMGMwMTVlZDFkMjk0YjY0YTg4M2QxYjkyNGQ1OGZlMlwiLFwidXJsX2lkc1wiOltc=
+ImZkN2Q4MjE3ZDBhMjNmNTM4YWI3YmZhZTZkMDU1NTY0NGU0YTZjZGRcIl0sXCJtc2dfdHNcIjo=
+xNzQ0ODExOTA0fSJ9" target=3D"_blank" style=3D"background-color: #00bce6; bo=
+rder-radius: 2px; color: #ffffff !important; display: inline-block; font-fa=
+mily: sans-serif; font-size: 14px; font-weight: bold; line-height: 38px; te=
+xt-align: center; text-decoration: none; width: 200px; -webkit-text-size-ad=
+just: none;">
+          <font color=3D"#ffffff">
+          View or Manage Order
+          </font>
+        </a>
+        <!--[if mso]>
+          </center>
+        </v:roundrect>
+        <![endif]-->
+      </div>
+    
+</div>
+<p style=3D"font-size: 12px; margin-block-end: 1.5rem; margin-block-start: =
+1.25rem;">
+If the above button is not working, copy/paste this URL into your browser:
+<br>
+<a href=3D"http://mclicks.brilliantmade.com/track/click/31127050/brilliantm=
+ade.com?p=3DeyJzIjoiOUhuVXRxQXRqbVNMd3V3NDFqbS1PODRTYjdNIiwidiI6MiwicCI6Int=
+cInVcIjozMTEyNzA1MCxcInZcIjoyLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2JyaWxsaWFudG=
+1hZGUuY29tXFxcL29yZGVyc1xcXC84MDQwNTVcIixcImlkXCI6XCIzMGMwMTVlZDFkMjk0YjY0Y=
+Tg4M2QxYjkyNGQ1OGZlMlwiLFwidXJsX2lkc1wiOltcImZkN2Q4MjE3ZDBhMjNmNTM4YWI3YmZh=
+ZTZkMDU1NTY0NGU0YTZjZGRcIl0sXCJtc2dfdHNcIjoxNzQ0ODExOTA0fSJ9" style=3D"colo=
+r: #009DE6 !important; font-weight: 500; text-decoration: none;">https://br=
+illiantmade.com/orders/804055</a>
+</p>
+<p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">
+Feel free to reply to this email with any questions.
+</p>
+<p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">
+Cheers,
+<br>Bubble EU Store
+<span style=3D"font-size: 80%; color: #949494;">via Brilliant</span>
+</p>
+<hr>
+
+<h3>Order 804055</h3>
+<p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">Ordered=
+ by Andre Fowlkes</p>
+  <p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">
+    Ship to:
+    Andre Fowlkes<br>Rua Eusebio Ferreira 42<br>AP 421<br>Carcavelos,  2775=
+-403 PT
+  </p>
+<table id=3D"receipt" style=3D"width: 100%; text-align: left;">
+        <tr>
+    <td>
+        Hotfix Mug
+    </td>
+
+    <td>
+        x 1
+    </td>
+    <td>
+        $30.00
+    </td>
+  </tr>
+
+      <tr>
+        <td>Subtotal</td>
+        <td></td>
+        <td>
+          $30.00
+        </td>
+      </tr>
+      <tr>
+        <td>Shipping</td>
+        <td></td>
+        <td>
+            $17.35
+        </td>
+      </tr>
+      <tr>
+        <th style=3D"padding-right: 15px;" align=3D"left">Total</th>
+        <td></td>
+        <td>
+          $47.35
+        </td>
+      </tr>
+</table>
+  <hr>
+      <p style=3D"margin-block-end: 1.5rem; margin-block-start: 1.25rem;">
+        $47.35 via gift_card (payment id 633925)
+      </p>
+
+
+</td>
+<td style=3D"min-width: 30px;" bgcolor=3D"#fff">
+=C2=A0
+</td>
+</tr>
+<tr>
+<td colspan=3D"3" style=3D"height: 25px;" bgcolor=3D"#fff"></td>
+</tr>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100%; margin: 0p=
+x;">
+<tr>
+<td colspan=3D"3" style=3D"color: #aeb3b7; padding: 15px 0 20px;" align=3D"=
+center" bgcolor=3D"#f5f5f5">
+<p style=3D"margin-top: 20px; color: #aeb3b7 !important; font-size: 12px; l=
+ine-height: 24px; font-family: 'Helvetica Neue', Helvetica, sans-serif; mar=
+gin-block-end: 1.5rem; margin-block-start: 1.25rem;" align=3D"center">
+<a href=3D"http://mclicks.brilliantmade.com/track/click/31127050/brilliantm=
+ade.com?p=3DeyJzIjoiR05kMUxWSi1tZDlONFBCT21vTXBpc2MybTk0IiwidiI6MiwicCI6Int=
+cInVcIjozMTEyNzA1MCxcInZcIjoyLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2JyaWxsaWFudG=
+1hZGUuY29tXFxcL1wiLFwiaWRcIjpcIjMwYzAxNWVkMWQyOTRiNjRhODgzZDFiOTI0ZDU4ZmUyX=
+CIsXCJ1cmxfaWRzXCI6W1wiMDdhZjU2M2UxZWIyMmQxMjc1MjZlNzg1MWI3NDExM2M3NGVlNzhh=
+NVwiXSxcIm1zZ190c1wiOjE3NDQ4MTE5MDR9In0" style=3D"color: #009DE6 !important=
+; font-weight: 500; text-decoration: none;"><img alt=3D"Brilliant" width=3D=
+"125" class=3D"filter-grey" src=3D"https://production-assets.brilliantmade.=
+com/assets/wordmark-668bbbb176f2eda905c543b4b36f4d336cd929e8009750dba1b40d4=
+ff5eb2757.png"></a>
+</p>
+<p style=3D"color: #aeb3b7 !important; font-size: 12px; line-height: 24px; =
+font-family: 'Helvetica Neue', Helvetica, sans-serif; margin-block-end: 1.5=
+rem; margin-block-start: 1.25rem;" align=3D"center">
+1605 S Waukegan, Waukegan, IL
+</p>
+</td>
+</tr>
+</table>
+
+
+<img src=3D"http://mclicks.brilliantmade.com/track/open.php?u=3D31127050&id=
+=3D30c015ed1d294b64a883d1b924d58fe2" height=3D"1" width=3D"1" alt=3D""></bo=
+dy>
+</html>
+
+
+
+--_av-Mp19B04TRHRZ6H8vjAHjRQ--
+
