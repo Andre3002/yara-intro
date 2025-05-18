@@ -1,0 +1,125 @@
+Delivered-To: andre.fowlkes@gmail.com
+Received: by 2002:a05:6a10:cca3:b0:601:1ef7:971d with SMTP id gj35csp529678pxb;
+        Thu, 15 May 2025 10:39:55 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IE7tAcTVPHc/1jZMb1p8W2KZbjidGsxMN3YAurgPX0ScV3jhjj1okETMRVWfecV5U6ekhj4
+X-Received: by 2002:a05:6000:18af:b0:3a0:a3f3:5034 with SMTP id ffacd0b85a97d-3a35c82fb4bmr754606f8f.34.1747330795054;
+        Thu, 15 May 2025 10:39:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1747330795; cv=none;
+        d=google.com; s=arc-20240605;
+        b=PtThaWOMauPMTBpSBNz4qKeEMEyW2miInWWXLBUe+4wxslgGubC1nqrBQ33zTdLCcc
+         FjYXSjd36kVDFi4qeWusD6eu5gSAftha2zgyJgj0fV3JL6bmkr+AtJbMyXXE0xZllDKq
+         o19hePpX4silE2NEml1376Cs/cvrYLN9PcFpLYFgxAs1hCTSmSx8E2eaZyP/jBhiqSis
+         GwYjls1LVFptkVwoc5FouW7zuYN7PIg3+pCmUw20RxMzz4SqgjXLc/EGxcvYhyxHLiR3
+         GCsecz6vH4vselGV1aP+8hWrxbSEcOW2yeJ3QPW0joIiFhZxS0G1fFP1OHJNXiDDI1Am
+         qaow==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:message-id:subject:to:from:date:domainkey-signature
+         :dkim-signature;
+        bh=AuRjT+yIzUCS9oaK9VfD7OaCyJKOUertp8RKify3fqM=;
+        fh=gNHqUZ2hLwEQMFAy+ucexRhFrsUPGex2Z1LbjxfAQuc=;
+        b=SWzbSQC2hLpaWiQqlh3j1j0OYMWtniGYb82gmCWpj3B6qWNPmo34d3fvwZN9UPsnzk
+         FL6POe55vAH8uN0xmkM+HVHfS2sFI1PBFHa0Kcszb0s6BeEYtfPq1Q3jH4r8dhT5Z7rp
+         2WN7lg0Hv4DkZgBMqIEi+AqlvYDIReV0NoLn0NxIL8SGxK5KLaHhnJ/Nt9n5XC3R55P0
+         qr9rPOzfrEgLvwRgiHoP/36L2kMGnSIooxjeOQBf1kJKH50HcfMhmoau0wugITJiBRow
+         7igylQoREkForCIdEOZOFQC3vIUSCPEp+sfJgeeeejkQ8J3eHZ9+2ZPi4umtyFIYN7yr
+         06MQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@xjeenuzm.poisonholidayet.us.com header.s=smtp header.b=CyopawGB;
+       spf=pass (google.com: domain of return@poisonholidayet.us.com designates 193.70.86.77 as permitted sender) smtp.mailfrom=Return@poisonholidayet.us.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=xjeenuzm.poisonholidayet.us.com
+Return-Path: <Return@poisonholidayet.us.com>
+Received: from vps-02644888.vps.ovh.net (vps-02644888.vps.ovh.net. [193.70.86.77])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3a35ca8b8bdsi85812f8f.679.2025.05.15.10.39.54
+        for <andre.fowlkes@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Thu, 15 May 2025 10:39:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of return@poisonholidayet.us.com designates 193.70.86.77 as permitted sender) client-ip=193.70.86.77;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@xjeenuzm.poisonholidayet.us.com header.s=smtp header.b=CyopawGB;
+       spf=pass (google.com: domain of return@poisonholidayet.us.com designates 193.70.86.77 as permitted sender) smtp.mailfrom=Return@poisonholidayet.us.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=xjeenuzm.poisonholidayet.us.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=xjeenuzm.poisonholidayet.us.com;
+ h=Date:From:To:Subject:Message-ID:MIME-Version:Content-Type; i=info@xjeenuzm.poisonholidayet.us.com;
+ bh=d2/2KjIAiOZ0lFwDPA7j3L91TK4=;
+ b=CyopawGBaJn2Y5SCiEOAmR1jSlew5Kg+5S8bTBr0RLEvDxCKeUdO75CCPvVLizUgGtrPh7s95qgs
+   PYou1sxzVgesngQfvglOx5paGbTnYxOoRr+Fx2v+dH2S90oPNghS3hx6m8BbYPeEpbw7n2vdracC
+   K57TP9JxrU577YKUaIM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=smtp; d=xjeenuzm.poisonholidayet.us.com;
+ b=ON349rQjbYwSKnufFbET0K8BAFBGUS3oQQRFWVuwLlhVTbIKi7LTz/0As52x6FeEETkjTz9bQr2C
+   B6DocaORcpEbONB1J6Hg9qIniKV6nUvj94JJgM7ZF++6sGXImYzP8WSsNdpaR8M7n+TGyuxqlWb5
+   x8B6wQous1k64uE2Z+w=;
+Received: from colsrgkwdw.com (ip6-localhost ) by pdr8-services-05v (Postfix) with ESMTP id PYY28AGM for <andre.fowlkes@gmail.com>; Thu, 15 May 2025 17:39:54 +0000
+Date: Thu, 15 May 2025 17:39:54 +0000.1284-12800
+From: "Sephora®" <info@xjeenuzm.poisonholidayet.us.com>
+To: andre.fowlkes@gmail.com
+Subject:  andre.fowlkes - You have won a Lancôme Beauty Box 🎁
+X-Google-Sender-Delegation:Sephora.com
+Message-ID: <65570610729871.errqwdzi9abu7v84iffc5umq@microsoftstore1.microsoft.com>
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="vmta-193_70_86_77-N1"; report-type=delivery-status
+
+--vmta-193_70_86_77-N1Content-Type: multipart/related;
+boundary="12800-1284-936d9c719d1c13fd97a248827ddb6385" --12800-1284-936d9c719d1c13fd97a248827ddb6385
+--vmta-193_70_86_77-N1
+Content-Type: multipart/related; boundary="12800-1284-936d9c719d1c13fd97a248827ddb6385"
+
+--12800-1284-936d9c719d1c13fd97a248827ddb6385
+Content-Type: multipart/alternative; boundary="andre.fowlkes"
+
+--andre.fowlkes
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscribe
+--andre.fowlkes
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit+
+
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<div class="gmail_quote"> 
+
+<!doctype html>
+<body>
+<center>
+<div style="width:550px;background:#F7F7F7;font-family:arial;">
+<a href="https://storage.googleapis.com/warebirebim3ahadl9awm/warebirebim3ahadl9awm.html#4vnxIG145100znqa871htmjfrzwyf1284TQSEGCAFHBGDXCE12800WATW3178S22" style="color:black; text-decoration:none;">
+<div style="background:black;">
+<span style="font-size:16px;color:white">It only takes a minute to claim your amazing reward.</span>
+</div><br>
+<span style="text-align: center;">
+<a href="https://storage.googleapis.com/warebirebim3ahadl9awm/warebirebim3ahadl9awm.html#4GwlOd145100CuNg871nvuzsqjwqj1284ODVMPZIRCVQIOOK12800KFID3178s22" style="font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 15px; color: #4A236F; text-decoration:none;">
+<span style="font: 70px IMPACT; letter-spacing: 20px;">
+<b>
+<span style="color:black; border-radius: 20px; font-family:arial;">SEPHORA</span>
+</b>
+</span>
+</a>
+</span>
+<br>
+<b><span style="font-size:25px;color:black;text-shadow: 1px 1px 10px black;"><br><br><span style="color:black;font-size:30px">The Latest Beauty Trends</span><br><span style="color:black;font-size:30px;color:#E11A2B">Today’s Winner is andre.fowlkes</span><br><span style="color:black;font-size:30px">YOU HAVE BEEN SELECTED!</span><br>
+ 
+</span></b>
+ 
+<b><span style="font-size:25px;color:black;text-shadow: 1px 1px 10px black;" >To receive your gift:</span></b><br><br>
+ 
+            <b><span style="font-size:33px;color:#bfac00;text-decoration: underline overline #bfac00;">Lancôme Beauty Box</span></b>
+<br><br><br>
+<b><a href="https://storage.googleapis.com/warebirebim3ahadl9awm/warebirebim3ahadl9awm.html#4SZWji145100SlpH871lqnhhmuaim1284VEPGUVAMFEFQOZL12800LGAD3178Z22" style="background:#E11A2B;padding:10px;padding-left:50px;padding-right:50px;font-size:22px;border:solid black;color:white;text-decoration: none;">Claim Your Gift</a></b><br><br><br>
+<div style="background:black;">
+<br><b><span style="font-size:35px;color: #bfac00 ">Congratulations</span></b>
+<br><br><br><span style="padding:1.5px;font-size:20px;color:white;padding:10px;">
+You've been selected to join our loyalty program <b style="color:#E11A2B">for FREE!</b> It only takes a minute to receive this incredible reward.</b><br>
+<b><center style="font-size:15px;color:black">© 2025 GROUPE NOCIBE SAS</center></b></span><br>
+</div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<span style="font-size:10px;color:#757575">If you no longer wish to receive these emails, you may unsubscribe by <span style="color:blue;text-decoration: underline;"><a href="https://storage.googleapis.com/warebirebim3ahadl9awm/warebirebim3ahadl9awm.html#5ueoDz145100fwTz871iratqbvfwc1284DUOLHCNULORJMBM12800SITY3178K22">clicking here.</a></span><br> </span>
+</center>
+</body>

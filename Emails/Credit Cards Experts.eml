@@ -1,0 +1,519 @@
+Delivered-To: afowlk1@gmail.com
+Received: by 2002:a05:7108:5b0f:b0:3ef:e8e9:2e7d with SMTP id hp15csp470096gdb;
+        Sat, 17 May 2025 08:09:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG+aBhK5/LV3YdCkMw/OEcDQRaDcI6y6PxKgGDsm6h78LgLsB1KPIcCvOS9ZI9xPsmn22w3
+X-Received: by 2002:a05:6102:5688:b0:4df:4b22:d16f with SMTP id ada2fe7eead31-4dfa6bcbf35mr8330814137.15.1747494557283;
+        Sat, 17 May 2025 08:09:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1747494557; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Mwo5qe2Ibq1cab3xxSBew8aum/Z40P9Mb2/qlxoXSk+NfCqKxa59AEq95ngVgKP1iz
+         eqZCMYhdcicskcptmF6TGyzdr4sFQREBePFHwxDbsjVbmS/4crJiiHbPA84soXSo/TgA
+         d+nhQw0/7Jfsli0f/WU+zSKq8K4wgSvMo2hME9R578qC5K7EJopC90ScvaNSiV6fxjFP
+         UIyK1ZssdYug6J0FFbi9SlTAvCvQAIlF0zjaOJ8MC2w6XDFNCzjQPLXwbQSpWwF9OQ6O
+         qNmBNgJFCK/irSMfeH3HOw0eAer9CQ8tR5/h9zIMw45qV4XOHIsbLriYbdladnkmlFdo
+         s8eg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:feedback-id:list-unsubscribe-post:mime-version
+         :subject:message-id:to:reply-to:from:date:dkim-signature
+         :dkim-signature;
+        bh=Q3EZuwJv9Suzn3hmjGF8Ax5ku8rAVlql3ISDHpt0TFU=;
+        fh=BgEBVK8QsvOJubZincWIkanU+VRWf/U7HN+3IbiOrYI=;
+        b=FEuwhq+DFD4z03wz91NiUOn+YmjuzgUQ3NDA3jXVamTceM5cT1CwQdVp8LLfENfQNz
+         f8W3HdiRdS4r7GmL2AlKJRyJ+6uI0H2SgSx9L/ZM974/KPo385h8HJfeedV/OT4dEcWl
+         Srm/Pciy2qotwHQ8y4KTFeSAIpKkouIAZHsDo2DDX+8nedxspx+l+HnlYvrkgh0zatLj
+         CfzSG3hkipMEXGVMXlKM1FfWCN0HCbc7KehONDvCQN7l8e09T9Rh1vEwBFpV2X29RKSc
+         YiqVbPtyr0OH54isJtx6J1rxx6E+4vGF8HmYO6YLE/AjfaM+3VOi80UlKSLnFrIKnFZB
+         iCdw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@from.smarttradersgeneration.com header.s=zc4rrx3h6zfejo6iusrb5qybyb3fnoem header.b=PEA0HMui;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=nwyHPnM7;
+       spf=pass (google.com: domain of 01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@amazonses.com designates 54.240.79.71 as permitted sender) smtp.mailfrom=01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=from.smarttradersgeneration.com
+Return-Path: <01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@amazonses.com>
+Received: from a79-71.smtp-out.amazonses.com (a79-71.smtp-out.amazonses.com. [54.240.79.71])
+        by mx.google.com with ESMTPS id ada2fe7eead31-4dfa68b8a5csi2162600137.533.2025.05.17.08.09.17
+        for <afowlk1@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 17 May 2025 08:09:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@amazonses.com designates 54.240.79.71 as permitted sender) client-ip=54.240.79.71;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@from.smarttradersgeneration.com header.s=zc4rrx3h6zfejo6iusrb5qybyb3fnoem header.b=PEA0HMui;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=nwyHPnM7;
+       spf=pass (google.com: domain of 01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@amazonses.com designates 54.240.79.71 as permitted sender) smtp.mailfrom=01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=from.smarttradersgeneration.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=zc4rrx3h6zfejo6iusrb5qybyb3fnoem;
+	d=from.smarttradersgeneration.com; t=1747494557;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:List-Unsubscribe;
+	bh=Q3EZuwJv9Suzn3hmjGF8Ax5ku8rAVlql3ISDHpt0TFU=;
+	b=PEA0HMuiCw6Rmk7uBrhEu7cNWUC1EKUOUAL9evGeGifoueSsHYBqcBsQbg6iiWpo
+	yypmDCVP3WzK4kBZQtQa450uiAhLZB6r7pN/s/itlNtUmKgvIvHqBBkBebW7JtUj5u3
+	GQCbEv+4fhqn1Nf3XaN70ZmwB8oY/Z9/3Oo7oIXglWui5Osm/qW/BvTaXX/rc8QIpXb
+	MBQ89A8ktWe9AkPEzbGoRw84PVOWf9y+9hld90GgYnP1W8mn2JjKsWug/paCjk6x6nn
+	8susFWGouUtToVLnSCwyAMB2NM/69yakVx6LJU7ANzipb/+tCwPkliVdqoU6zq9ccMK
+	WjRKUlBh1g==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1747494557;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:Feedback-ID:List-Unsubscribe;
+	bh=Q3EZuwJv9Suzn3hmjGF8Ax5ku8rAVlql3ISDHpt0TFU=;
+	b=nwyHPnM7PT/axytIjUeVQCotKwq9ysh6QLCm7uA/91aoPBVYIhpzAtgY4ktbNMgL
+	M/tW7Es9hzr1LYS5/vQ/cLwVGd+25q7NWreTzvH8seWgqljrOGW0w2m1q4YEJ8JtsRR
+	xsqyexd1Gc3+/P5gVXyz9SdBgJrT8prUMFUnsHHY=
+Date: Sat, 17 May 2025 15:09:16 +0000
+From: "No-Interest Credit Card, Grand Traders Generation" <news@from.smarttradersgeneration.com>
+Reply-To: support@smarttradersgeneration.com
+To: afowlk1@gmail.com
+Message-ID: <01000196decad533-11fdaad7-5fb6-44f6-baf3-b62eddab76b4-000000@email.amazonses.com>
+Subject: =?UTF-8?Q?Top_Credit_Cards_List_Experts_Approved_=F0=9F=92=B3_|_May_17?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5137_1931607635.1747494556971"
+X-Campaign-ID: 13571901
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: ::1.us-east-1.lCJVkz6+3S71MtYe1CeGk/9v1Z83C325jnahyIHJIg0=:AmazonSES
+List-Unsubscribe: <https://links.iterable.com/e/encryptedUnsubscribe?_r=7e9644fbf6c24786a724656d236247ae&_s=a9d74ea9764f4ce9b856a6316a301bbe&_t=dwy3Z26MG78ZCls7x4_fSkSNnctrSV4oXlW5sUGpsnLzpQP8cepmbZp-uD-07aQCNYowYWl160-t2qa6BM9c0d-mp_W857QXqvvORMRvfsU%3D>,<mailto:unsubscribe+13571901+17745758@unsubscribe.iterable.com>
+X-Feedback-ID: 17745758:13571901:97683:iterable
+X-Message-ID: a9d74ea9764f4ce9b856a6316a301bbe
+X-SES-Outgoing: 2025.05.17-54.240.79.71
+
+------=_Part_5137_1931607635.1747494556971
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+If you have outstanding credit card debt, getting a new 0% intro APR credit=
+=20
+card could help ease the pressure while you pay down your balances.
+
+
+
+
+Unsubscribe=20
+<https://links.from.smarttradersgeneration.com/e/encryptedUnsubscribe?_r=3D=
+7e9644fbf6c24786a724656d236247ae&_s=3Da9d74ea9764f4ce9b856a6316a301bbe&_t=
+=3Ddwy3Z26MG78ZCls7x4_fSkSNnctrSV4oXlW5sUGpsnLzpQP8cepmbZp-uD-07aQCNYowYWl1=
+60-t2qa6BM9c0d-mp_W857QXqvvORMRvfsU%3D>
+
+
+
+ <https://smarttradersgeneration.com/>
+
+
+
+
+
+
+ If you have outstanding credit card debt, getting a new 0% intro APR credi=
+t=20
+card could help ease the pressure while you pay down your balances.=20
+=20
+<https://tracking.smarttradersgeneration.com/d455e102-6403-49ac-a857-76ffb4=
+ff42b6?email=3Dafowlk1@gmail.com&domain=3D094STG&type=3DB&copy=3DIMG1286_1>
+Our credit card experts identified top credit cards for balance transfers t=
+hat=20
+are perfect for anyone looking to pay down debt and not add to it!
+
+Click through to see what all the hype is about.=20
+<https://tracking.smarttradersgeneration.com/d455e102-6403-49ac-a857-76ffb4=
+ff42b6?email=3Dafowlk1@gmail.com&domain=3D094STG&type=3DB&copy=3DIMG1286_1>
+ This is an advertisement.=20
+ This email contains references to products from one or more of our=20
+advertisers. FinanceBuzz is an informational website that provides tips,=20
+advice, and recommendations to help you make financial decisions. We strive=
+ to=20
+provide up-to-date information, but make no warranties regarding the accura=
+cy=20
+of our information.=20
+ Ultimately, you are responsible for your financial decisions. FinanceBuzz =
+is=20
+not a financial institution and does not provide credit cards or any other=
+=20
+financial products. FinanceBuzz does not make any credit decisions. We may=
+=20
+receive compensation from the products and services mentioned in this email=
+.=20
+ Please click here <https://financebuzz.com/unsub> to opt out of future ema=
+ils=20
+from FinanceBuzz.=20
+ 111 E. Atlantic Ave., Suite 200 Delray Beach, FL 33444=20
+
+
+
+ <https://smarttradersgeneration.com/>
+
+=E2=80=8A
+
+GrandTradersGeneration.com <https://smarttradersgeneration.com/> brought to=
+=20
+you by Inception Media, LLC.
+
+
+
+Please add our email address to your contact book (or mark as important) to=
+=20
+guarantee that our emails continue to reach your inbox.
+
+
+ Inception Media, LLC appreciates your comments and inquiries. Please keep =
+in=20
+mind, that Inception Media, LLC are not permitted to provide individualized=
+=20
+financial advise. This email is not financial advice and any investment=20
+decision you make is solely your responsibility.
+
+This editorial email with educational news was sent to afowlk1@gmail.com.
+Unsubscribe=20
+<https://links.from.smarttradersgeneration.com/e/encryptedUnsubscribe?_r=3D=
+7e9644fbf6c24786a724656d236247ae&_s=3Da9d74ea9764f4ce9b856a6316a301bbe&_t=
+=3Ddwy3Z26MG78ZCls7x4_fSkSNnctrSV4oXlW5sUGpsnLzpQP8cepmbZp-uD-07aQCNYowYWl1=
+60-t2qa6BM9c0d-mp_W857QXqvvORMRvfsU%3D>
+ to stop receiving marketing communication from us.
+
+ Feel free to contact us toll free Domestic/International: +13024463628=20
+<tel:+13024463628> Mon=E2=80=93Fri, 9am=E2=80=935pm ET, or email us=20
+support@smarttradersgeneration.com <mailto:support@smarttradersgeneration.c=
+om>
+
+
+600 N Broad St Ste 5 PMB 1 Middletown, DE 19709
+
+
+Inception Media, LLC. All rights reserved
+
+
+Privacy Policy <https://smarttradersgeneration.com/privacy-policy/>
+
+------=_Part_5137_1931607635.1747494556971
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"u=
+rn:schemas-microsoft-com:office:office" lang=3D"en" style=3D"box-sizing: bo=
+rder-box;"><head><title></title><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"><meta name=3D"viewport" content=3D"width=3D=
+device-width,initial-scale=3D1"><!--[if mso]><xml><w:WordDocument xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyRead=
+ingMail/></w:WordDocument> <o:OfficeDocumentSettings><o:PixelsPerInch>96</o=
+:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><s=
+tyle>*{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detecto=
+rs]{color:inherit!important;text-decoration:inherit!important}#MessageViewB=
+ody a{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hid=
+e,.desktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidde=
+n}.image_block img+div{display:none}sub,sup{font-size:75%;line-height:0}@me=
+dia(max-width:620px){.mobile_hide{display:none}.row-content{width:100%!impo=
+rtant}.stack .column{width:100%;display:block}.mobile_hide{min-height:0;max=
+-height:0;max-width:0;overflow:hidden;font-size:0}.desktop_hide,.desktop_hi=
+de table{display:table!important;max-height:none!important}}</style><!--[if=
+ mso ]><style>sup,sub{font-size:100%!important}sup{mso-text-raise:10%}sub{m=
+so-text-raise:-10%}</style><![endif]--></head><body class=3D"body" style=3D=
+"box-sizing: border-box; background-color: #fff; margin: 0; padding: 0; -we=
+bkit-text-size-adjust: none; text-size-adjust: none;"><span style=3D"color:=
+transparent;visibility:hidden;display:none;opacity:0;height:0;width:0;font-=
+size:0;">If you have outstanding credit card debt, getting a new 0% intro A=
+PR credit card could help ease the pressure while you pay down your balance=
+s. </span><img src=3D"https://links.from.smarttradersgeneration.com/e/eo?_t=
+=3D7e9644fbf6c24786a724656d236247ae&amp;_m=3Da9d74ea9764f4ce9b856a6316a301b=
+be&amp;_e=3Ddwy3Z26MG78ZCls7x4_fSkSNnctrSV4oXlW5sUGpsnLzpQP8cepmbZp-uD-07aQ=
+CNYowYWl160-t2qa6BM9c0SRwfgRXVAAMk8I_9n2l3S6EjgE8q0eyhsBpkkNyWciE8rVeUeuOq_=
+744glr7z7nOg%3D%3D" style=3D"border:0;width:1px;height:1px;border-width:0px=
+!important;display:none!important;line-height:0!important;" width=3D"1" hei=
+ght=3D"1"/><table class=3D"nl-container" width=3D"100%" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: bo=
+rder-box; mso-table-lspace: 0; mso-table-rspace: 0; background-color: #fff;=
+" bgcolor=3D"#fff"><tbody style=3D"box-sizing: border-box;"><tr style=3D"bo=
+x-sizing: border-box;"><td style=3D"box-sizing: border-box;"><table class=
+=3D"row row-1" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box;=
+ mso-table-lspace: 0; mso-table-rspace: 0; background-color: #70838d;" bgco=
+lor=3D"#70838d"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-s=
+izing: border-box;"><td style=3D"box-sizing: border-box;"><table class=3D"r=
+ow-content stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-l=
+space: 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 600px;=
+ margin: 0 auto;" width=3D"600"><tbody style=3D"box-sizing: border-box;"><t=
+r style=3D"box-sizing: border-box;"><td class=3D"column column-1" width=3D"=
+100%" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspac=
+e: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top:=
+ 5px; vertical-align: top;" align=3D"left" valign=3D"top"><table class=3D"p=
+aragraph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-tab=
+le-lspace: 0; mso-table-rspace: 0; word-break: break-word;"><tr style=3D"bo=
+x-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; p=
+adding-right: 10px;"><div style=3D"box-sizing: border-box; color: #000; dir=
+ection: ltr; font-family: Tahoma,Verdana,Segoe,sans-serif; font-size: 13px;=
+ font-weight: 400; letter-spacing: 0; line-height: 1.2; text-align: right; =
+mso-line-height-alt: 16px;"><p style=3D"box-sizing: border-box; line-height=
+: inherit; margin: 0;"><a href=3D"https://links.from.smarttradersgeneration=
+.com/e/encryptedUnsubscribe?_r=3D7e9644fbf6c24786a724656d236247ae&_s=3Da9d7=
+4ea9764f4ce9b856a6316a301bbe&_t=3Ddwy3Z26MG78ZCls7x4_fSkSNnctrSV4oXlW5sUGps=
+nLzpQP8cepmbZp-uD-07aQCNYowYWl160-t2qa6BM9c0d-mp_W857QXqvvORMRvfsU%3D" targ=
+et=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underline; =
+color: #dee9ff;" rel=3D"noopener">Unsubscribe</a></p></div></td></tr></tabl=
+e></td></tr></tbody></table></td></tr></tbody></table><table class=3D"row r=
+ow-2" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-tabl=
+e-lspace: 0; mso-table-rspace: 0; background-color: #70838d;" bgcolor=3D"#7=
+0838d"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: bo=
+rder-box;"><td style=3D"box-sizing: border-box;"><table class=3D"row-conten=
+t stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0;=
+ mso-table-rspace: 0; color: #000; width: 600px; margin: 0 auto;" width=3D"=
+600"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: bord=
+er-box;"><td class=3D"column column-1" width=3D"100%" style=3D"box-sizing: =
+border-box; mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; tex=
+t-align: left; vertical-align: top;" align=3D"left" valign=3D"top"><table c=
+lass=3D"image_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; ms=
+o-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-bo=
+x;"><td class=3D"pad" style=3D"box-sizing: border-box; width: 100%;" width=
+=3D"100%"><div class=3D"alignment" align=3D"center" style=3D"box-sizing: bo=
+rder-box;"><div style=3D"box-sizing: border-box; max-width: 600px;"><a href=
+=3D"https://links.from.smarttradersgeneration.com/u/click?_t=3D7e9644fbf6c2=
+4786a724656d236247ae&_m=3Da9d74ea9764f4ce9b856a6316a301bbe&_e=3D1e8FDcKnmOp=
+WtGmaMYGLhmM1mFgiCVuV2ki3ztX71gL8miI8_5baLehEuXp8mo2p4iDz1nACZLm8l2iKW2yTbb=
+abcDXy-M8qytjZcNEjOSxdf9Px5S5adxZLfhWfeCfEgPMeFf-P4rKw7r4vQrv82qXuh_qvLfdDZ=
+l9UAgwVo3oSGxex3Yi5cw9I4iUpbxyGXe8fJiRPkP0uJEDLIXIYYg%3D%3D" target=3D"_bla=
+nk" style=3D"box-sizing: border-box; outline: none;" tabindex=3D"-1"><img s=
+rc=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d57=
+13-9b6a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c24786a724656d236247ae/1_3.png" st=
+yle=3D"box-sizing: border-box; display: block; height: auto; border: 0; wid=
+th: 100%;" width=3D"600" alt=3D"Logo" title=3D"Logo" height=3D"auto"></a></=
+div></div></td></tr></table></td></tr></tbody></table></td></tr></tbody></t=
+able><table class=3D"row row-3" align=3D"center" width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-si=
+zing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; background-colo=
+r: #70838d;" bgcolor=3D"#70838d"><tbody style=3D"box-sizing: border-box;"><=
+tr style=3D"box-sizing: border-box;"><td style=3D"box-sizing: border-box;">=
+<table class=3D"row-content stack" align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border=
+-box; mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #0=
+00; width: 600px; margin: 0 auto;" width=3D"600"><tbody style=3D"box-sizing=
+: border-box;"><tr style=3D"box-sizing: border-box;"><td class=3D"column co=
+lumn-1" width=3D"100%" style=3D"box-sizing: border-box; mso-table-lspace: 0=
+; mso-table-rspace: 0; font-weight: 400; text-align: left; vertical-align: =
+top;" align=3D"left" valign=3D"top"><table class=3D"html_block block-1" wid=
+th=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rsp=
+ace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"b=
+ox-sizing: border-box;"><div style=3D"box-sizing: border-box; font-family: =
+Arial,'Helvetica Neue',Helvetica,sans-serif; text-align: center;" align=3D"=
+center"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"box-sizing: border-box; max-width: 100%;"> <tbody style=3D"box=
+-sizing: border-box;"> <tr style=3D"box-sizing: border-box;"> <td align=3D"=
+center" valign=3D"top" style=3D"box-sizing: border-box;"> <table class=3D"p=
+rimary-table-limit content-table" bgcolor=3D"#FFFFFF" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"box-sizing: border-box;=
+ max-width: 600px;"> <tbody style=3D"box-sizing: border-box;"> <tr style=3D=
+"box-sizing: border-box;"> <td class=3D"content-vertical-space" align=3D"ce=
+nter" style=3D"box-sizing: border-box; padding-left: 20px; padding-right: 2=
+0px;"> <table class=3D"content-inner-table" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"100%" style=3D"box-sizing: border-box; width: 10=
+0%;"> <tbody style=3D"box-sizing: border-box;"> <tr style=3D"box-sizing: bo=
+rder-box;"> <td height=3D"16" width=3D"100%" style=3D"box-sizing: border-bo=
+x; max-width: 100%;" class=3D"md-horizontal-space"></td> </tr> <tr style=3D=
+"box-sizing: border-box;"> <td style=3D"box-sizing: border-box; font-family=
+: 'Roboto', Arial, Helvetica, sans-serif; font-style: normal; font-weight: =
+normal; line-height: 1.5; text-align: left; color: #000000; padding-top: 14=
+px; padding-bottom: 14px; font-size: 20px;" align=3D"left"> <span style=3D"=
+box-sizing: border-box; font-family: 'Roboto', Arial, Helvetica, sans-serif=
+; font-style: normal; font-weight: normal; line-height: 1.5; text-align: le=
+ft; color: #000000; font-size: 20px;"> If you have outstanding credit card =
+debt, getting a new 0% intro APR credit card could help ease the pressure w=
+hile you pay down your balances. </span> </td> </tr> <tr style=3D"box-sizin=
+g: border-box;"> <td class=3D"img-bg-block" align=3D"center" style=3D"box-s=
+izing: border-box; padding-top: 14px; padding-bottom: 14px;"> <a href=3D"ht=
+tps://links.from.smarttradersgeneration.com/u/click?_t=3D7e9644fbf6c24786a7=
+24656d236247ae&_m=3Da9d74ea9764f4ce9b856a6316a301bbe&_e=3D1e8FDcKnmOpWtGmaM=
+YGLhjCzSDWqFINuKQKhdBc0sJnuPPviY5TXIOaN4Laz4_hY6IAwHvCTD_sWcMirwx04EPUJnnPg=
+ci4kzPHaM0VHUCVGQ7dEdSRV4DCsol8rQTVQ4tMmre-24w02TCu-Pgc8VvyqToq0Z642gC7KOSE=
+ENg5ahs98kteXF-xfW1oS1Bk44_8B-rsM2t09ai5d77bFweOzs-XkVYiFOVGGfSX5IJOQjbIfLO=
+NbDGRgkbAc33uE1da-NDPI38RUXLqCKmlKPxxc-n0YT_O4smgaTHnIWAJyMbXxEPPV3junXUtOo=
+kBC0B5_bzRHnfrMnSYBFBe6QuM1ra6vdIG8sef-evP43Ak%3D" target=3D"_blank" style=
+=3D"box-sizing: border-box;"> <img alt=3D"Card" height=3D"auto" src=3D"http=
+s://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46=
+bb-bd7e-c542cff6dd6a/7e9644fbf6c24786a724656d236247ae/ejknfme%20%283%29.jpg=
+" style=3D"box-sizing: border-box; border: 0; display: block; outline: none=
+; text-decoration: none; height: auto; width: 100%; max-width: 560px; font-=
+size: 13px;" width=3D"560"> </a> </td> </tr> <tr style=3D"box-sizing: borde=
+r-box;"> <td style=3D"box-sizing: border-box; font-family: 'Roboto', Arial,=
+ Helvetica, sans-serif; font-style: normal; font-weight: normal; line-heigh=
+t: 1.5; text-align: left; color: #000000; padding-top: 14px; padding-bottom=
+: 14px; font-size: 20px;" align=3D"left"> <span style=3D"box-sizing: border=
+-box; font-family: 'Roboto', Arial, Helvetica, sans-serif; font-style: norm=
+al; font-weight: normal; line-height: 1.5; text-align: left; color: #000000=
+; font-size: 20px;">Our credit card experts identified top credit cards for=
+ balance transfers that are perfect for anyone looking to pay down debt and=
+ not add to it!<br style=3D"box-sizing: border-box;"><br style=3D"box-sizin=
+g: border-box;"> <a href=3D"https://links.from.smarttradersgeneration.com/u=
+/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=3Da9d74ea9764f4ce9b856a6316=
+a301bbe&_e=3D1e8FDcKnmOpWtGmaMYGLhjCzSDWqFINuKQKhdBc0sJnuPPviY5TXIOaN4Laz4_=
+hY6IAwHvCTD_sWcMirwx04EPUJnnPgci4kzPHaM0VHUCVGQ7dEdSRV4DCsol8rQTVQ4tMmre-24=
+w02TCu-Pgc8VvyqToq0Z642gC7KOSEENg5ahs98kteXF-xfW1oS1Bk44_8B-rsM2t09ai5d77bF=
+wbWoDv86iclv0QWa61KCbJw6gdBqasmP1DS4eOMzi0_WX-VUKAwx-GP-KB9l8hQ70RyLCIzuLnf=
+__26VeV4j0RHgCfAUEG0PC0P_F2kNoq5ZuTY6ZbJIT21xmubYA9M-Ws--rkN8p7DTOdVBoeTah2=
+8%3D" style=3D"box-sizing: border-box; font-family: 'Roboto', Arial, Helvet=
+ica, sans-serif; text-decoration: underline; font-weight: 700; color: #006f=
+be;">Click through to see what all the hype is about.</a> </span> </td> </t=
+r> <tr style=3D"box-sizing: border-box;"> <td align=3D"center" style=3D"box=
+-sizing: border-box; font-family: 'Roboto', Arial, Helvetica, sans-serif; f=
+ont-size: 12px; font-style: normal; font-weight: normal; line-height: 1.5; =
+text-align: center; color: #000000; padding-top: 14px; padding-bottom: 14px=
+;"> <span style=3D"box-sizing: border-box; font-family: 'Roboto', Arial, He=
+lvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: norm=
+al; line-height: 1.5; text-align: center; color: #000000;"> This is an adve=
+rtisement. </span> </td> </tr> <tr style=3D"box-sizing: border-box;"> <td a=
+lign=3D"center" style=3D"box-sizing: border-box; font-family: 'Roboto', Ari=
+al, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight=
+: normal; line-height: 1.5; text-align: center; color: #000000; padding-top=
+: 14px; padding-bottom: 14px;"> <span style=3D"box-sizing: border-box; font=
+-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 12px; font-styl=
+e: normal; font-weight: normal; line-height: 1.5; text-align: center; color=
+: #000000;"> This email contains references to products from one or more of=
+ our advertisers. FinanceBuzz is an informational website that provides tip=
+s, advice, and recommendations to help you make financial decisions. We str=
+ive to provide up-to-date information, but make no warranties regarding the=
+ accuracy of our information. </span> </td> </tr> <tr style=3D"box-sizing: =
+border-box;"> <td align=3D"center" style=3D"box-sizing: border-box; font-fa=
+mily: 'Roboto', Arial, Helvetica, sans-serif; font-size: 12px; font-style: =
+normal; font-weight: normal; line-height: 1.5; text-align: center; color: #=
+000000; padding-top: 14px; padding-bottom: 14px;"> <span style=3D"box-sizin=
+g: border-box; font-family: 'Roboto', Arial, Helvetica, sans-serif; font-si=
+ze: 12px; font-style: normal; font-weight: normal; line-height: 1.5; text-a=
+lign: center; color: #000000;"> Ultimately, you are responsible for your fi=
+nancial decisions. FinanceBuzz is not a financial institution and does not =
+provide credit cards or any other financial products. FinanceBuzz does not =
+make any credit decisions. We may receive compensation from the products an=
+d services mentioned in this email. </span> </td> </tr> <tr style=3D"box-si=
+zing: border-box;"> <td align=3D"center" style=3D"box-sizing: border-box; f=
+ont-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 12px; font-s=
+tyle: normal; font-weight: normal; line-height: 1.5; text-align: center; co=
+lor: #000000; padding-top: 14px; padding-bottom: 14px;"> <span style=3D"box=
+-sizing: border-box; font-family: 'Roboto', Arial, Helvetica, sans-serif; f=
+ont-size: 12px; font-style: normal; font-weight: normal; line-height: 1.5; =
+text-align: center; color: #000000;"> Please <a href=3D"https://links.from.=
+smarttradersgeneration.com/u/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=
+=3Da9d74ea9764f4ce9b856a6316a301bbe&_e=3D1e8FDcKnmOpWtGmaMYGLhthYrAJdf3n6DR=
+xeaGQV498PiXx6Mq-nCrBNSXS8Ndfev7qutprmlflJ5YODEGj1YEHkM2_KGx16FNtPj_qEWrK1a=
+nqJq38K_d1Y-Y6XqBwoYO-dmn5p5orOlDy2xGH_RemMuSrhdbLh_Nz0z2Gu7ghUj-28L3qKQIjV=
+gfmHXJ1N8QpAGuBiogHLEFg-IVpW0g%3D%3D" style=3D"box-sizing: border-box; font=
+-family: 'Roboto', Arial, Helvetica, sans-serif; text-decoration: underline=
+; font-weight: 700; color: #006fbe;">click here</a> to opt out of future em=
+ails from FinanceBuzz. </span> </td> </tr> <tr style=3D"box-sizing: border-=
+box;"> <td align=3D"center" style=3D"box-sizing: border-box; font-family: '=
+Roboto', Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal;=
+ font-weight: normal; line-height: 1.5; text-align: center; color: #000000;=
+ padding-top: 14px; padding-bottom: 14px;"> <span style=3D"box-sizing: bord=
+er-box; font-family: 'Roboto', Arial, Helvetica, sans-serif; font-size: 12p=
+x; font-style: normal; font-weight: normal; line-height: 1.5; text-align: c=
+enter; color: #000000;"> 111 E. Atlantic Ave., Suite 200 Delray Beach, FL 3=
+3444 </span> </td> </tr> <tr style=3D"box-sizing: border-box;"> <td height=
+=3D"16" width=3D"100%" style=3D"box-sizing: border-box; max-width: 100%;" c=
+lass=3D"md-horizontal-space"></td> </tr> </tbody> </table> </td> </tr> </tb=
+ody> </table> </td> </tr> </tbody> </table> </div></td></tr></table></td></=
+tr></tbody></table></td></tr></tbody></table><table class=3D"row row-4" ali=
+gn=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace:=
+ 0; mso-table-rspace: 0; background-color: #70838d;" bgcolor=3D"#70838d"><t=
+body style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;=
+"><td style=3D"box-sizing: border-box;"><table class=3D"row-content stack" =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-tabl=
+e-rspace: 0; background-image: url(https://d15k2d11r6t6rl.cloudfront.net/pu=
+blic/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c2478=
+6a724656d236247ae/footer_bg_1.png); background-repeat: no-repeat; backgroun=
+d-size: cover; border-radius: 0; color: #000; width: 600px; margin: 0 auto;=
+" width=3D"600" background=3D"https://d15k2d11r6t6rl.cloudfront.net/public/=
+users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c24786a724=
+656d236247ae/footer_bg_1.png"><tbody style=3D"box-sizing: border-box;"><tr =
+style=3D"box-sizing: border-box;"><td class=3D"column column-1" width=3D"10=
+0%" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace:=
+ 0; font-weight: 400; text-align: left; vertical-align: top;" align=3D"left=
+" valign=3D"top"><table class=3D"image_block block-1" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+ox-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=
+=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-=
+box; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; padding-=
+top: 15px; width: 100%;" width=3D"100%"><div class=3D"alignment" align=3D"c=
+enter" style=3D"box-sizing: border-box;"><div style=3D"box-sizing: border-b=
+ox; max-width: 240px;"><a href=3D"https://links.from.smarttradersgeneration=
+.com/u/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=3Da9d74ea9764f4ce9b85=
+6a6316a301bbe&_e=3D1e8FDcKnmOpWtGmaMYGLhmM1mFgiCVuV2ki3ztX71gL8miI8_5baLehE=
+uXp8mo2pYc0bHupl7kdDeFiwyOrJvkMCc-V6UYgd8bt2eUJ7Tzt-vM1ruozdltya-IBjk37Bl29=
+E74BYLphOuikJiF1dbkjeXTFTuZPcgqxde31E7mHID9kJRA0yAh4xkdeB4fIKGK_z9xV_0j6vu0=
+FbWyezmg%3D%3D" target=3D"_blank" style=3D"box-sizing: border-box; outline:=
+ none;" tabindex=3D"-1"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/p=
+ublic/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c247=
+86a724656d236247ae/logo%20%286%29.png" style=3D"box-sizing: border-box; dis=
+play: block; height: auto; border: 0; width: 100%;" width=3D"240" alt=3D"Lo=
+go" title=3D"Logo" height=3D"auto"></a></div></div></td></tr></table><table=
+ class=3D"divider_block block-2" width=3D"100%" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box=
+; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: borde=
+r-box;"><td class=3D"pad" style=3D"box-sizing: border-box; padding-bottom: =
+10px; padding-top: 10px;"><div class=3D"alignment" align=3D"center" style=
+=3D"box-sizing: border-box;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"90%" style=3D"box-sizing: border-b=
+ox; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: bor=
+der-box;"><td class=3D"divider_inner" style=3D"box-sizing: border-box; font=
+-size: 1px; line-height: 1px; border-top: 2px solid #bdd1d7;"><span style=
+=3D"box-sizing: border-box; word-break: break-word;">&#8202;</span></td></t=
+r></table></div></td></tr></table><table class=3D"paragraph_block block-3" =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-=
+rspace: 0; word-break: break-word;"><tr style=3D"box-sizing: border-box;"><=
+td class=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 25px; pad=
+ding-left: 30px; padding-right: 30px; padding-top: 10px;"><div style=3D"box=
+-sizing: border-box; color: #fff; direction: ltr; font-family: Tahoma,Verda=
+na,Segoe,sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 0; =
+line-height: 1.5; text-align: center; mso-line-height-alt: 20px;"><p style=
+=3D"box-sizing: border-box; line-height: inherit; margin: 0; margin-bottom:=
+ 0;"> <a href=3D"https://links.from.smarttradersgeneration.com/u/click?_t=
+=3D7e9644fbf6c24786a724656d236247ae&_m=3Da9d74ea9764f4ce9b856a6316a301bbe&_=
+e=3D1e8FDcKnmOpWtGmaMYGLhmM1mFgiCVuV2ki3ztX71gL8miI8_5baLehEuXp8mo2pjWllNGB=
+JoG5XYDVnbh_1MBpIsE5GDXXS-DMz1FyRlmQ2PDkXCKxzgu35O2TNvQu-aBpDn6czthh7PHOpKz=
+L41mpicSlFLkxx1xFzmZ4_4ccfj5nVHaO9EtHz8Oe0cPPtUa8DGqXniMArPgxeX8VMHA%3D%3D"=
+ target=3D"_blank" style=3D"box-sizing: border-box; text-decoration: underl=
+ine; color: #dee9ff;" rel=3D"noopener">GrandTradersGeneration.com</a> broug=
+ht to you by Inception Media, LLC.</p><p style=3D"box-sizing: border-box; l=
+ine-height: inherit; margin: 0; margin-bottom: 0;">&nbsp;</p><p style=3D"bo=
+x-sizing: border-box; line-height: inherit; margin: 0; margin-bottom: 0;">P=
+lease add our email address to your contact book (or mark as important) to =
+guarantee that our emails continue to reach your inbox.</p><p style=3D"box-=
+sizing: border-box; line-height: inherit; margin: 0; margin-bottom: 0;"><br=
+ style=3D"box-sizing: border-box;"> Inception Media, LLC appreciates your c=
+omments and inquiries. Please keep in mind, that Inception Media, LLC are n=
+ot permitted to provide individualized financial advise. This email is not =
+financial advice and any investment decision you make is solely your respon=
+sibility.<br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: bor=
+der-box;">This editorial email with educational news was sent to afowlk1@gm=
+ail.com.<br style=3D"box-sizing: border-box;"> <a href=3D"https://links.fro=
+m.smarttradersgeneration.com/e/encryptedUnsubscribe?_r=3D7e9644fbf6c24786a7=
+24656d236247ae&_s=3Da9d74ea9764f4ce9b856a6316a301bbe&_t=3Ddwy3Z26MG78ZCls7x=
+4_fSkSNnctrSV4oXlW5sUGpsnLzpQP8cepmbZp-uD-07aQCNYowYWl160-t2qa6BM9c0d-mp_W8=
+57QXqvvORMRvfsU%3D" target=3D"_blank" style=3D"box-sizing: border-box; text=
+-decoration: underline; color: #dee9ff;" rel=3D"noopener">Unsubscribe</a> t=
+o stop receiving marketing communication from us.<br style=3D"box-sizing: b=
+order-box;"><br style=3D"box-sizing: border-box;"> Feel free to contact us =
+toll free Domestic/International: <a target=3D"_blank" delay=3D"150" href=
+=3D"tel:+13024463628" rel=3D"noopener noreferrer" style=3D"box-sizing: bord=
+er-box; text-decoration: underline; color: #dee9ff;">+13024463628</a> Mon=
+=E2=80=93Fri, 9am=E2=80=935pm ET, or email us <a href=3D"mailto:support@sma=
+rttradersgeneration.com" target=3D"_blank" rel=3D"noopener" style=3D"box-si=
+zing: border-box; text-decoration: underline; color: #dee9ff;">support@smar=
+ttradersgeneration.com</a></p><p style=3D"box-sizing: border-box; line-heig=
+ht: inherit; margin: 0; margin-bottom: 0;"><br style=3D"box-sizing: border-=
+box;">600 N Broad St Ste 5 PMB 1 Middletown, DE 19709</p><p style=3D"box-si=
+zing: border-box; line-height: inherit; margin: 0; margin-bottom: 0;"><br s=
+tyle=3D"box-sizing: border-box;">Inception Media, LLC. All rights reserved<=
+/p><p style=3D"box-sizing: border-box; line-height: inherit; margin: 0;"><b=
+r style=3D"box-sizing: border-box;"><strong style=3D"box-sizing: border-box=
+;"><a href=3D"https://links.from.smarttradersgeneration.com/u/click?_t=3D7e=
+9644fbf6c24786a724656d236247ae&_m=3Da9d74ea9764f4ce9b856a6316a301bbe&_e=3D1=
+e8FDcKnmOpWtGmaMYGLhmM1mFgiCVuV2ki3ztX71gIUNweDBbJmdVFdZL-3fPFy_CowcQBbooWf=
+QhFiEF9RpiAszIGEya7vItfx0onkxdK7luqaQuTduDMS_ZCeg_Gbqg2unAeAg_D599N3vDklOvc=
+o82CXIlD5JkFpsLFX6IBwxRCTrXOwhmgZskJwlCVLGFumSnpU6672vz9BOhpxQyGNypKI2j-c2O=
+ZAjnK0_aI%3D" target=3D"_blank" style=3D"box-sizing: border-box; text-decor=
+ation: underline; color: #dee9ff;" rel=3D"noopener">Privacy Policy</a></str=
+ong></p></div></td></tr></table></td></tr></tbody></table></td></tr></tbody=
+></table></td></tr></tbody></table><!-- End --> </body></html>
+------=_Part_5137_1931607635.1747494556971--
