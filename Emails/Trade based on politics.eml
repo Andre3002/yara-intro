@@ -1,0 +1,490 @@
+Delivered-To: afowlk1@gmail.com
+Received: by 2002:a05:7108:5b0f:b0:3ef:e8e9:2e7d with SMTP id hp15csp1511370gdb;
+        Mon, 19 May 2025 07:42:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IECuKGuVU5TgN+jaXEdkOcN51LDSoCnna1+rzC6GtU9gnvTFEzetuDkPBeME5m+nyQB41JS
+X-Received: by 2002:a05:622a:5147:b0:476:add4:d2a9 with SMTP id d75a77b69052e-494ae3ff84bmr212430961cf.30.1747665737311;
+        Mon, 19 May 2025 07:42:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1747665737; cv=none;
+        d=google.com; s=arc-20240605;
+        b=OE8T98617WLv4Z0swhKUCJ+K/E/0QgvGGbwsoO0GRGN4ebcfnma8839tgR1iiw8LaG
+         r3QJNgi4s35xwaCYbFzsCeS+Tj6kPkVAdDorlV/qmMkYn8RXYY3EkHIoxlIcSS/pdnET
+         6CodCcR2yMH2TyoWaBdXuLNPkTRC9x8QyvbYA+VHJ/MLnKyN7V8zQnDNGQRB2NouZVAd
+         O0DmNc/GnGahPAuoY0d/pwekeIGAv6Tw/ykeGrefpyBrFRvNseihPpfG48unjf3lg38/
+         flJaQYEeiSmlctDVjWWCp7MMdRx33XmIPeDG2P8o9MBhPsjxFulnjmBc6kHSbVRKtxb5
+         /lDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:feedback-id:list-unsubscribe-post:mime-version
+         :subject:message-id:to:reply-to:from:date:dkim-signature
+         :dkim-signature;
+        bh=SP9AEQxluLmyCj9JcDfFiF28Xen0fCO7Z5fgnskvQOg=;
+        fh=BgEBVK8QsvOJubZincWIkanU+VRWf/U7HN+3IbiOrYI=;
+        b=WxVv+kevRZwyYdqFmGDtbUfQpvo3P+reKa4B14jlOx60Fejn/zQKEHdHrcGSjIGvuj
+         FSmznuYElvm4Bd9bfkXsHIwiBrIsL4kRDMsg5LXjc+b0tCzsCI+0nSlFlWNcVVEKtM4h
+         FGybcj52TOgxlmgSjzmbnXvGE/tlfoAHX8VUqGMZvmZUggjOUWjMs7q3Do1iDwnN/kWO
+         qc+Ol94fewCOh65qFDMRNNYYVbfav3hcCNVeMaE/JumjrrtCuAxbJ5XkuxYPi3vwD0qQ
+         xLTkJWhQE4Yn3FjZDsCLZ2gc5vjlKAOhnXG54eHJxzwQVGjEU361FBKm7xwBH4cs6X63
+         L1hA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@from.smarttradersgeneration.com header.s=zc4rrx3h6zfejo6iusrb5qybyb3fnoem header.b=e72HsR11;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=EaK4I8CW;
+       spf=pass (google.com: domain of 01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@amazonses.com designates 54.240.78.66 as permitted sender) smtp.mailfrom=01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=from.smarttradersgeneration.com
+Return-Path: <01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@amazonses.com>
+Received: from a78-66.smtp-out.amazonses.com (a78-66.smtp-out.amazonses.com. [54.240.78.66])
+        by mx.google.com with ESMTPS id d75a77b69052e-494ae55fdd6si84987431cf.276.2025.05.19.07.42.17
+        for <afowlk1@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 19 May 2025 07:42:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@amazonses.com designates 54.240.78.66 as permitted sender) client-ip=54.240.78.66;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@from.smarttradersgeneration.com header.s=zc4rrx3h6zfejo6iusrb5qybyb3fnoem header.b=e72HsR11;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=EaK4I8CW;
+       spf=pass (google.com: domain of 01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@amazonses.com designates 54.240.78.66 as permitted sender) smtp.mailfrom=01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=from.smarttradersgeneration.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=zc4rrx3h6zfejo6iusrb5qybyb3fnoem;
+	d=from.smarttradersgeneration.com; t=1747665732;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:List-Unsubscribe;
+	bh=SP9AEQxluLmyCj9JcDfFiF28Xen0fCO7Z5fgnskvQOg=;
+	b=e72HsR11zUwHdNv13DmN9anDqoDwfDTtOXlcdSPnoBigltLqMhaMyx61Ff5YjEYO
+	TQB1/wOm1zqkI5QzN/iScV7cWMsXIeqkJokkWljyswIrxu9K9jPEkZCqOpz3HXiGDf9
+	hI0yJUtsLzDXlSfFOYnGxxoJaW9tfnXffVfxJeVTH/FIM/HODQuhzDDo/lhCPUGZ9EY
+	PQKKTfZtVdT27i9bWm53Q6OiUyCAjsfyXNfAafvhRTFxn6/FoAEoiiUIMSP4x36C3bf
+	K+w+ZJ3kkikYyyPborEvSseTFyPg1qGdRqFdOdCXvIxh1brx9+4bahmksf3y8rko1QM
+	sf9lKPBJdA==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1747665732;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:Feedback-ID:List-Unsubscribe;
+	bh=SP9AEQxluLmyCj9JcDfFiF28Xen0fCO7Z5fgnskvQOg=;
+	b=EaK4I8CWRt96WjajUIq9qU8utvAXAt3YBrmxAgLEh2FwNbIFm7Xd25T1dUuvmv8G
+	d+FwiRYhP3xgz6eGtkTybr+lf13Z88keqC11okiWbeoq8oaDMtrp+QIw26rwSVaC9qe
+	aHnVO/lM9Yhc2uXF9dm9dzqCe1eFoTH+8LhWSM1U=
+Date: Mon, 19 May 2025 14:42:12 +0000
+From: "Trump Exposes Zelenskyy, Grand Traders Generation" <news@from.smarttradersgeneration.com>
+Reply-To: support@smarttradersgeneration.com
+To: afowlk1@gmail.com
+Message-ID: <01000196e8fec395-7ceb8f69-dcbf-4bee-85c5-f1f8f3c86e47-000000@email.amazonses.com>
+Subject: =?UTF-8?Q?Shocking_Statement:_Trump_vs._Zelensk?=
+ =?UTF-8?Q?yy=E2=80=94Find_Out_What_Happened_=E2=98=8E=EF=B8=8F_|_May_19?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_418777_165999179.1747665732493"
+X-Campaign-ID: 13581946
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: ::1.us-east-1.lCJVkz6+3S71MtYe1CeGk/9v1Z83C325jnahyIHJIg0=:AmazonSES
+List-Unsubscribe: <https://links.iterable.com/e/encryptedUnsubscribe?_r=7e9644fbf6c24786a724656d236247ae&_s=48a90d73659a4c7c8390889c70e7dc94&_t=uc8Zq1o1vsHvAkL-BsFXGQEBlgFvFzeZgBLcOSBQ3fLHcLAdsse32VPAgI8rdyO2KhDeJpBNwSPB6R4SDjV0OcCWxBU7aCon4IEqfljGoV0%3D>,<mailto:unsubscribe+13581946+17758535@unsubscribe.iterable.com>
+X-Feedback-ID: 17758535:13581946:97683:iterable
+X-Message-ID: 48a90d73659a4c7c8390889c70e7dc94
+X-SES-Outgoing: 2025.05.19-54.240.78.66
+
+------=_Part_418777_165999179.1747665732493
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+This unexpected move is sparking debates and could have major consequences =
+for=20
+diplomatic relations, the economy, and the ongoing conflict in Ukraine.
+
+
+
+
+Unsubscribe=20
+<https://links.from.smarttradersgeneration.com/e/encryptedUnsubscribe?_r=3D=
+7e9644fbf6c24786a724656d236247ae&_s=3D48a90d73659a4c7c8390889c70e7dc94&_t=
+=3Duc8Zq1o1vsHvAkL-BsFXGQEBlgFvFzeZgBLcOSBQ3fLHcLAdsse32VPAgI8rdyO2KhDeJpBN=
+wSPB6R4SDjV0OcCWxBU7aCon4IEqfljGoV0%3D>
+
+
+
+ <https://smarttradersgeneration.com/>
+
+
+
+
+
+
+ In a surprising twist, Trump takes a bold stand against Zelenskyy=20
+<https://tracking.smarttradersgeneration.com/024c6729-cdf3-4a36-8a7e-ec91da=
+c1ef05?email=3Dafowlk1@gmail.com&domain=3D094STG&type=3DB&copy=3DIMG0825_63=
+9GT1>
+ in a shocking statement that=E2=80=99s taking the world by storm.
+
+Why is Trump calling out Zelenskyy? What does this mean for the future of=
+=20
+global peace and America=E2=80=99s role in international politics?=20
+<https://tracking.smarttradersgeneration.com/024c6729-cdf3-4a36-8a7e-ec91da=
+c1ef05?email=3Dafowlk1@gmail.com&domain=3D094STG&type=3DB&copy=3DIMG0825_63=
+9GT1>
+=20
+<https://tracking.smarttradersgeneration.com/024c6729-cdf3-4a36-8a7e-ec91da=
+c1ef05?email=3Dafowlk1@gmail.com&domain=3D094STG&type=3DB&copy=3DIMG0825_63=
+9GT1>
+ This unexpected move is sparking debates and could have major consequences=
+=20
+for diplomatic relations, the economy, and the ongoing conflict in Ukraine.
+
+Click HERE=20
+<https://tracking.smarttradersgeneration.com/024c6729-cdf3-4a36-8a7e-ec91da=
+c1ef05?email=3Dafowlk1@gmail.com&domain=3D094STG&type=3DB&copy=3DIMG0825_63=
+9GT1>
+ to uncover the reasons behind Trump=E2=80=99s stance and what it means for=
+ you.
+
+P.S. Trump=E2=80=99s stance on Ukraine could lead to major shifts in global=
+ policies=20
+and markets. Stay ahead and protect your interests.=20
+
+
+
+ <https://smarttradersgeneration.com/>
+
+=E2=80=8A
+
+GrandTradersGeneration.com <https://smarttradersgeneration.com/> brought to=
+=20
+you by Inception Media, LLC.
+
+
+
+Please add our email address to your contact book (or mark as important) to=
+=20
+guarantee that our emails continue to reach your inbox.
+
+
+ Inception Media, LLC appreciates your comments and inquiries. Please keep =
+in=20
+mind, that Inception Media, LLC are not permitted to provide individualized=
+=20
+financial advise. This email is not financial advice and any investment=20
+decision you make is solely your responsibility.
+
+This editorial email with educational news was sent to afowlk1@gmail.com.
+Unsubscribe=20
+<https://links.from.smarttradersgeneration.com/e/encryptedUnsubscribe?_r=3D=
+7e9644fbf6c24786a724656d236247ae&_s=3D48a90d73659a4c7c8390889c70e7dc94&_t=
+=3Duc8Zq1o1vsHvAkL-BsFXGQEBlgFvFzeZgBLcOSBQ3fLHcLAdsse32VPAgI8rdyO2KhDeJpBN=
+wSPB6R4SDjV0OcCWxBU7aCon4IEqfljGoV0%3D>
+ to stop receiving marketing communication from us.
+
+ Feel free to contact us toll free Domestic/International: +13024463628=20
+<tel:+13024463628> Mon=E2=80=93Fri, 9am=E2=80=935pm ET, or email us=20
+support@smarttradersgeneration.com <mailto:support@smarttradersgeneration.c=
+om>
+
+
+600 N Broad St Ste 5 PMB 1 Middletown, DE 19709
+
+
+Inception Media, LLC. All rights reserved
+
+
+Privacy Policy <https://smarttradersgeneration.com/privacy-policy/>
+
+------=_Part_418777_165999179.1747665732493
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"u=
+rn:schemas-microsoft-com:office:office" lang=3D"en" style=3D"box-sizing: bo=
+rder-box;"><head><title></title><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"><meta name=3D"viewport" content=3D"width=3D=
+device-width,initial-scale=3D1"><!--[if mso]><xml><w:WordDocument xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyRead=
+ingMail/></w:WordDocument> <o:OfficeDocumentSettings><o:PixelsPerInch>96</o=
+:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><s=
+tyle>*{box-sizing:border-box}body{margin:0;padding:0}a[x-apple-data-detecto=
+rs]{color:inherit!important;text-decoration:inherit!important}#MessageViewB=
+ody a{color:inherit;text-decoration:none}p{line-height:inherit}.desktop_hid=
+e,.desktop_hide table{mso-hide:all;display:none;max-height:0;overflow:hidde=
+n}.image_block img+div{display:none}sub,sup{font-size:75%;line-height:0}@me=
+dia(max-width:620px){.mobile_hide{display:none}.row-content{width:100%!impo=
+rtant}.stack .column{width:100%;display:block}.mobile_hide{min-height:0;max=
+-height:0;max-width:0;overflow:hidden;font-size:0}.desktop_hide,.desktop_hi=
+de table{display:table!important;max-height:none!important}}</style><!--[if=
+ mso ]><style>sup,sub{font-size:100%!important}sup{mso-text-raise:10%}sub{m=
+so-text-raise:-10%}</style><![endif]--></head><body class=3D"body" style=3D=
+"box-sizing: border-box; background-color: #fff; margin: 0; padding: 0; -we=
+bkit-text-size-adjust: none; text-size-adjust: none;"><span style=3D"color:=
+transparent;visibility:hidden;display:none;opacity:0;height:0;width:0;font-=
+size:0;">This unexpected move is sparking debates and could have major cons=
+equences for diplomatic relations, the economy, and the ongoing conflict in=
+ Ukraine. </span><img src=3D"https://links.from.smarttradersgeneration.com/=
+e/eo?_t=3D7e9644fbf6c24786a724656d236247ae&amp;_m=3D48a90d73659a4c7c8390889=
+c70e7dc94&amp;_e=3Duc8Zq1o1vsHvAkL-BsFXGQEBlgFvFzeZgBLcOSBQ3fLHcLAdsse32VPA=
+gI8rdyO2KhDeJpBNwSPB6R4SDjV0OcED5I2OzevZ6hDs_WXAiyF_GtlRLLFb9IDaYa23X081CHW=
+OTcqGuJgAX_CSx7YDLA%3D%3D" style=3D"border:0;width:1px;height:1px;border-wi=
+dth:0px!important;display:none!important;line-height:0!important;" width=3D=
+"1" height=3D"1"/><table class=3D"nl-container" width=3D"100%" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-siz=
+ing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; background-color=
+: #fff;" bgcolor=3D"#fff"><tbody style=3D"box-sizing: border-box;"><tr styl=
+e=3D"box-sizing: border-box;"><td style=3D"box-sizing: border-box;"><table =
+class=3D"row row-1" align=3D"center" width=3D"100%" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border=
+-box; mso-table-lspace: 0; mso-table-rspace: 0; background-color: #70838d;"=
+ bgcolor=3D"#70838d"><tbody style=3D"box-sizing: border-box;"><tr style=3D"=
+box-sizing: border-box;"><td style=3D"box-sizing: border-box;"><table class=
+=3D"row-content stack" align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-ta=
+ble-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 6=
+00px; margin: 0 auto;" width=3D"600"><tbody style=3D"box-sizing: border-box=
+;"><tr style=3D"box-sizing: border-box;"><td class=3D"column column-1" widt=
+h=3D"100%" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-=
+rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding=
+-top: 5px; vertical-align: top;" align=3D"left" valign=3D"top"><table class=
+=3D"paragraph_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; ms=
+o-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"><tr style=
+=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: border-=
+box; padding-right: 10px;"><div style=3D"box-sizing: border-box; color: #00=
+0; direction: ltr; font-family: Tahoma,Verdana,Segoe,sans-serif; font-size:=
+ 13px; font-weight: 400; letter-spacing: 0; line-height: 1.2; text-align: r=
+ight; mso-line-height-alt: 16px;"><p style=3D"box-sizing: border-box; line-=
+height: inherit; margin: 0;"><a href=3D"https://links.from.smarttradersgene=
+ration.com/e/encryptedUnsubscribe?_r=3D7e9644fbf6c24786a724656d236247ae&_s=
+=3D48a90d73659a4c7c8390889c70e7dc94&_t=3Duc8Zq1o1vsHvAkL-BsFXGQEBlgFvFzeZgB=
+LcOSBQ3fLHcLAdsse32VPAgI8rdyO2KhDeJpBNwSPB6R4SDjV0OcCWxBU7aCon4IEqfljGoV0%3=
+D" target=3D"_blank" style=3D"box-sizing: border-box; text-decoration: unde=
+rline; color: #dee9ff;" rel=3D"noopener">Unsubscribe</a></p></div></td></tr=
+></table></td></tr></tbody></table></td></tr></tbody></table><table class=
+=3D"row row-2" align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-box;=
+ mso-table-lspace: 0; mso-table-rspace: 0; background-color: #70838d;" bgco=
+lor=3D"#70838d"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-s=
+izing: border-box;"><td style=3D"box-sizing: border-box;"><table class=3D"r=
+ow-content stack" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-l=
+space: 0; mso-table-rspace: 0; color: #000; width: 600px; margin: 0 auto;" =
+width=3D"600"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-siz=
+ing: border-box;"><td class=3D"column column-1" width=3D"100%" style=3D"box=
+-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; font-weight:=
+ 400; text-align: left; vertical-align: top;" align=3D"left" valign=3D"top"=
+><table class=3D"image_block block-1" width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: borde=
+r-box; mso-table-lspace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: =
+border-box;"><td class=3D"pad" style=3D"box-sizing: border-box; width: 100%=
+;" width=3D"100%"><div class=3D"alignment" align=3D"center" style=3D"box-si=
+zing: border-box;"><div style=3D"box-sizing: border-box; max-width: 600px;"=
+><a href=3D"https://links.from.smarttradersgeneration.com/u/click?_t=3D7e96=
+44fbf6c24786a724656d236247ae&_m=3D48a90d73659a4c7c8390889c70e7dc94&_e=3DQah=
+Wzg_7A5JR7VRY4SwmAOIm-brQPTATbklcWp1nukXJxCsaGakqAIay0sDCSL6tvFTLs58rAmAIa_=
+RogVRtRUV4AKTKGhFPcCHC53kaanyVe28eGjbCLmsZiAvt6c3gJLqlZfsqPi-3D2S46rXjSkyml=
+GETUg_cZIRk6LHJMlGU5weQJZP10OEQgBBIfW5h8B5nTbO2ygggU52Ga9qKqA%3D%3D" target=
+=3D"_blank" style=3D"box-sizing: border-box; outline: none;" tabindex=3D"-1=
+"><img src=3D"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrator=
+s/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c24786a724656d236247ae/1_3=
+.png" style=3D"box-sizing: border-box; display: block; height: auto; border=
+: 0; width: 100%;" width=3D"600" alt=3D"Logo" title=3D"Logo" height=3D"auto=
+"></a></div></div></td></tr></table></td></tr></tbody></table></td></tr></t=
+body></table><table class=3D"row row-3" align=3D"center" width=3D"100%" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; backg=
+round-color: #70838d;" bgcolor=3D"#70838d"><tbody style=3D"box-sizing: bord=
+er-box;"><tr style=3D"box-sizing: border-box;"><td style=3D"box-sizing: bor=
+der-box;"><table class=3D"row-content stack" align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizi=
+ng: border-box; mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0;=
+ color: #000; width: 600px; margin: 0 auto;" width=3D"600"><tbody style=3D"=
+box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><td class=3D=
+"column column-1" width=3D"100%" style=3D"box-sizing: border-box; mso-table=
+-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; vertic=
+al-align: top;" align=3D"left" valign=3D"top"><table class=3D"html_block bl=
+ock-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso=
+-table-rspace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" =
+style=3D"box-sizing: border-box;"><div style=3D"box-sizing: border-box; fon=
+t-family: Arial,'Helvetica Neue',Helvetica,sans-serif; text-align: center;"=
+ align=3D"center"><table width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"box-sizing: border-box; max-width: 100%;"> <tbody st=
+yle=3D"box-sizing: border-box;"> <tr style=3D"box-sizing: border-box;"> <td=
+ align=3D"center" valign=3D"top" style=3D"box-sizing: border-box;"> <table =
+class=3D"primary-table-limit content-table" bgcolor=3D"#FFFFFF" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"box-sizing: b=
+order-box; max-width: 600px;"> <tbody style=3D"box-sizing: border-box;"> <t=
+r style=3D"box-sizing: border-box;"> <td class=3D"content-vertical-space" a=
+lign=3D"center" style=3D"box-sizing: border-box; padding-left: 20px; paddin=
+g-right: 20px;"> <table class=3D"content-inner-table" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"box-sizing: border-box;=
+ width: 100%;"> <tbody style=3D"box-sizing: border-box;"> <tr style=3D"box-=
+sizing: border-box;"> <td height=3D"16" width=3D"100%" style=3D"box-sizing:=
+ border-box; max-width: 100%;" class=3D"md-horizontal-space"></td> </tr> <t=
+r style=3D"box-sizing: border-box;"> <td style=3D"box-sizing: border-box; f=
+ont-family: 'Roboto', Arial, Helvetica, sans-serif; font-style: normal; fon=
+t-weight: normal; line-height: 1.5; text-align: left; color: #000000; paddi=
+ng-top: 14px; padding-bottom: 14px; font-size: 20px;" align=3D"left"> <span=
+ style=3D"box-sizing: border-box; font-family: 'Roboto', Arial, Helvetica, =
+sans-serif; font-style: normal; font-weight: normal; line-height: 1.5; text=
+-align: left; color: #000000; font-size: 20px;"> In a surprising twist, <a =
+href=3D"https://links.from.smarttradersgeneration.com/u/click?_t=3D7e9644fb=
+f6c24786a724656d236247ae&_m=3D48a90d73659a4c7c8390889c70e7dc94&_e=3DQahWzg_=
+7A5JR7VRY4SwmAC34EVJMAMk_x-6EQVMBJ76hHtY07XZc4Bt_YiBHUUjJahB5M7_KU9qGXes3so=
+FIb1FuKhl8tF9ghq-9e2mRA5KG7_vEtW-WskOHxhAobUI1cZ4TIC9Yg5DfDBKx92SGLxQU9Cr5g=
+WodMNpNkEbUdXXhxHiuJTZDj4ZwGgVLZJ_5Zjy5H8TT-MTbni4uyoojhpe2erbBGcGyvklz0vyg=
+UHYGNEDcR4eO8Z6S25rxr1AfxGXUirxn-LDH9l3hexBbkpPn2bFBw3oDLaISWQPyiZsnUKCfsKJ=
+griP7o8OwipKTSjRtPiy5gXAU3NLr3VSMqe5_-qlbLlboplyI6BTh7nU%3D" style=3D"box-s=
+izing: border-box; font-family: 'Roboto', Arial, Helvetica, sans-serif; tex=
+t-decoration: underline; font-weight: 700; color: #006fbe;">Trump takes a b=
+old stand against Zelenskyy</a> in a shocking statement that=E2=80=99s taki=
+ng the world by storm. <br style=3D"box-sizing: border-box;"><br style=3D"b=
+ox-sizing: border-box;"> <a href=3D"https://links.from.smarttradersgenerati=
+on.com/u/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=3D48a90d73659a4c7c8=
+390889c70e7dc94&_e=3DQahWzg_7A5JR7VRY4SwmAC34EVJMAMk_x-6EQVMBJ76hHtY07XZc4B=
+t_YiBHUUjJahB5M7_KU9qGXes3soFIb1FuKhl8tF9ghq-9e2mRA5KG7_vEtW-WskOHxhAobUI1c=
+Z4TIC9Yg5DfDBKx92SGLxQU9Cr5gWodMNpNkEbUdXXhxHiuJTZDj4ZwGgVLZJ_5Zjy5H8TT-MTb=
+ni4uyoojhgxHbrbDDDblXcaZV7fXmsUUbanh3EpbECmx2QE05Jb7u0zP9MIZ0ShJcGzGcVJZm4s=
+rNQe1wyN9XmJlGbyePMyXqx9nccv1STzqoMrMKbYYAT_8TucWsSwHNpgrPYosUqqCeal-z0-7WG=
+ic6Sk2CaE%3D" style=3D"box-sizing: border-box; font-family: 'Roboto', Arial=
+, Helvetica, sans-serif; text-decoration: underline; font-weight: 700; colo=
+r: #006fbe;">Why is Trump calling out Zelenskyy? What does this mean for th=
+e future of global peace and America=E2=80=99s role in international politi=
+cs?</a> </span> </td> </tr> <tr style=3D"box-sizing: border-box;"> <td clas=
+s=3D"img-bg-block" align=3D"center" style=3D"box-sizing: border-box; paddin=
+g-top: 14px; padding-bottom: 14px;"> <a href=3D"https://links.from.smarttra=
+dersgeneration.com/u/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=3D48a90=
+d73659a4c7c8390889c70e7dc94&_e=3DQahWzg_7A5JR7VRY4SwmAC34EVJMAMk_x-6EQVMBJ7=
+6hHtY07XZc4Bt_YiBHUUjJahB5M7_KU9qGXes3soFIb1FuKhl8tF9ghq-9e2mRA5KG7_vEtW-Ws=
+kOHxhAobUI1cZ4TIC9Yg5DfDBKx92SGLxQU9Cr5gWodMNpNkEbUdXXhxHiuJTZDj4ZwGgVLZJ_5=
+Zjy5H8TT-MTbni4uyoojhiaTgcKL96WXomlbhWNbLuT0Z2-kpRzXLbPEBuu4VwnYfnj2M5ZdK3U=
+mefRPiUfEb2MnjKcVtvDT9xWk5buoNs4P2bcPE258T0g6DRZXVRR3clMRrkaQx7w4vIBcwfEe2F=
+R2KAiXBTrrEvqjs-VFENc%3D" target=3D"_blank" style=3D"box-sizing: border-box=
+;"> <img alt=3D"title" height=3D"auto" src=3D"https://d15k2d11r6t6rl.cloudf=
+ront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/7e96=
+44fbf6c24786a724656d236247ae/image%20%2816%29%20%282%29.png" style=3D"box-s=
+izing: border-box; border: 0; display: block; outline: none; text-decoratio=
+n: none; height: auto; width: 100%; max-width: 560px; font-size: 13px;" wid=
+th=3D"560"> </a> </td> </tr> <tr style=3D"box-sizing: border-box;"> <td sty=
+le=3D"box-sizing: border-box; font-family: 'Roboto', Arial, Helvetica, sans=
+-serif; font-style: normal; font-weight: normal; line-height: 1.5; text-ali=
+gn: left; color: #000000; padding-top: 14px; padding-bottom: 14px; font-siz=
+e: 20px;" align=3D"left"> <span style=3D"box-sizing: border-box; font-famil=
+y: 'Roboto', Arial, Helvetica, sans-serif; font-style: normal; font-weight:=
+ normal; line-height: 1.5; text-align: left; color: #000000; font-size: 20p=
+x;"> This unexpected move is sparking debates and could have major conseque=
+nces for diplomatic relations, the economy, and the ongoing conflict in Ukr=
+aine. <br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: border=
+-box;"> <a href=3D"https://links.from.smarttradersgeneration.com/u/click?_t=
+=3D7e9644fbf6c24786a724656d236247ae&_m=3D48a90d73659a4c7c8390889c70e7dc94&_=
+e=3DQahWzg_7A5JR7VRY4SwmAC34EVJMAMk_x-6EQVMBJ76hHtY07XZc4Bt_YiBHUUjJahB5M7_=
+KU9qGXes3soFIb1FuKhl8tF9ghq-9e2mRA5KG7_vEtW-WskOHxhAobUI1cZ4TIC9Yg5DfDBKx92=
+SGLxQU9Cr5gWodMNpNkEbUdXXhxHiuJTZDj4ZwGgVLZJ_5Zjy5H8TT-MTbni4uyoojhk2zX-Yj5=
+RKVTKS2FV3ll3YyeI2YZcPtAqoLr7O2CXVDNxXN4Bcpp4AXBYIaAAnf7HRQmmnW7kgApNzZWAN4=
+l0u-pPXcfMRlpbx5VIE6LXS7cdmll0BETp4o3c6FSeZkiO1211u77p5556K08oFWUEA%3D" sty=
+le=3D"box-sizing: border-box; font-family: 'Roboto', Arial, Helvetica, sans=
+-serif; text-decoration: underline; font-weight: 700; color: #006fbe;">Clic=
+k HERE</a> to uncover the reasons behind Trump=E2=80=99s stance and what it=
+ means for you. <br style=3D"box-sizing: border-box;"><br style=3D"box-sizi=
+ng: border-box;"> <b style=3D"box-sizing: border-box;">P.S.</b> Trump=E2=80=
+=99s stance on Ukraine could lead to major shifts in global policies and ma=
+rkets. Stay ahead and protect your interests. </span> </td> </tr> <tr style=
+=3D"box-sizing: border-box;"> <td height=3D"16" width=3D"100%" style=3D"box=
+-sizing: border-box; max-width: 100%;" class=3D"md-horizontal-space"></td> =
+</tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> =
+</table> </div></td></tr></table></td></tr></tbody></table></td></tr></tbod=
+y></table><table class=3D"row row-4" align=3D"center" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+ox-sizing: border-box; mso-table-lspace: 0; mso-table-rspace: 0; background=
+-color: #70838d;" bgcolor=3D"#70838d"><tbody style=3D"box-sizing: border-bo=
+x;"><tr style=3D"box-sizing: border-box;"><td style=3D"box-sizing: border-b=
+ox;"><table class=3D"row-content stack" align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: b=
+order-box; mso-table-lspace: 0; mso-table-rspace: 0; background-image: url(=
+https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6=
+a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c24786a724656d236247ae/footer_bg_1.png);=
+ background-repeat: no-repeat; background-size: cover; border-radius: 0; co=
+lor: #000; width: 600px; margin: 0 auto;" width=3D"600" background=3D"https=
+://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46b=
+b-bd7e-c542cff6dd6a/7e9644fbf6c24786a724656d236247ae/footer_bg_1.png"><tbod=
+y style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><=
+td class=3D"column column-1" width=3D"100%" style=3D"box-sizing: border-box=
+; mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: l=
+eft; vertical-align: top;" align=3D"left" valign=3D"top"><table class=3D"im=
+age_block block-1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"box-sizing: border-box; mso-table-ls=
+pace: 0; mso-table-rspace: 0;"><tr style=3D"box-sizing: border-box;"><td cl=
+ass=3D"pad" style=3D"box-sizing: border-box; padding-bottom: 5px; padding-l=
+eft: 15px; padding-right: 15px; padding-top: 15px; width: 100%;" width=3D"1=
+00%"><div class=3D"alignment" align=3D"center" style=3D"box-sizing: border-=
+box;"><div style=3D"box-sizing: border-box; max-width: 240px;"><a href=3D"h=
+ttps://links.from.smarttradersgeneration.com/u/click?_t=3D7e9644fbf6c24786a=
+724656d236247ae&_m=3D48a90d73659a4c7c8390889c70e7dc94&_e=3DQahWzg_7A5JR7VRY=
+4SwmAOIm-brQPTATbklcWp1nukXJxCsaGakqAIay0sDCSL6tpPfGZeNX4cp6Xao7gK16-5y5eC7=
+cmiXXAQqZ_n3D98a7zV4dDj6CjkCN6Dl0E85oVWrYqzuh5VKtrkbJUPI938G45BWvjsnzeOoxs_=
+uLNBzZz8wNPaRkGbMELZ0Q4IaeYi7eTaLrGdFhT-OXbC1k_A%3D%3D" target=3D"_blank" s=
+tyle=3D"box-sizing: border-box; outline: none;" tabindex=3D"-1"><img src=3D=
+"https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b=
+6a-46bb-bd7e-c542cff6dd6a/7e9644fbf6c24786a724656d236247ae/logo%20%286%29.p=
+ng" style=3D"box-sizing: border-box; display: block; height: auto; border: =
+0; width: 100%;" width=3D"240" alt=3D"Logo" title=3D"Logo" height=3D"auto">=
+</a></div></div></td></tr></table><table class=3D"divider_block block-2" wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rs=
+pace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"=
+box-sizing: border-box; padding-bottom: 10px; padding-top: 10px;"><div clas=
+s=3D"alignment" align=3D"center" style=3D"box-sizing: border-box;"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"90%" style=3D"box-sizing: border-box; mso-table-lspace: 0; mso-table-rs=
+pace: 0;"><tr style=3D"box-sizing: border-box;"><td class=3D"divider_inner"=
+ style=3D"box-sizing: border-box; font-size: 1px; line-height: 1px; border-=
+top: 2px solid #bdd1d7;"><span style=3D"box-sizing: border-box; word-break:=
+ break-word;">&#8202;</span></td></tr></table></div></td></tr></table><tabl=
+e class=3D"paragraph_block block-3" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"box-sizing: border-=
+box; mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"><tr=
+ style=3D"box-sizing: border-box;"><td class=3D"pad" style=3D"box-sizing: b=
+order-box; padding-bottom: 25px; padding-left: 30px; padding-right: 30px; p=
+adding-top: 10px;"><div style=3D"box-sizing: border-box; color: #fff; direc=
+tion: ltr; font-family: Tahoma,Verdana,Segoe,sans-serif; font-size: 13px; f=
+ont-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: center; m=
+so-line-height-alt: 20px;"><p style=3D"box-sizing: border-box; line-height:=
+ inherit; margin: 0; margin-bottom: 0;"> <a href=3D"https://links.from.smar=
+ttradersgeneration.com/u/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=3D4=
+8a90d73659a4c7c8390889c70e7dc94&_e=3DQahWzg_7A5JR7VRY4SwmAOIm-brQPTATbklcWp=
+1nukXJxCsaGakqAIay0sDCSL6t93Z_WjPZbyetFqyB3e3XAe92CSbjrwaplUXRp4bcDuIyXa-1o=
+xwvI2A53tEAnRDx1-eBXWicL9doNCxKna19cCth274VKjwnylbpI5FCJRvr7UoInGr9l9_1P0jz=
+FN9j5FynAx5KgoOF2IjiOpVh2A%3D%3D" target=3D"_blank" style=3D"box-sizing: bo=
+rder-box; text-decoration: underline; color: #dee9ff;" rel=3D"noopener">Gra=
+ndTradersGeneration.com</a> brought to you by Inception Media, LLC.</p><p s=
+tyle=3D"box-sizing: border-box; line-height: inherit; margin: 0; margin-bot=
+tom: 0;">&nbsp;</p><p style=3D"box-sizing: border-box; line-height: inherit=
+; margin: 0; margin-bottom: 0;">Please add our email address to your contac=
+t book (or mark as important) to guarantee that our emails continue to reac=
+h your inbox.</p><p style=3D"box-sizing: border-box; line-height: inherit; =
+margin: 0; margin-bottom: 0;"><br style=3D"box-sizing: border-box;"> Incept=
+ion Media, LLC appreciates your comments and inquiries. Please keep in mind=
+, that Inception Media, LLC are not permitted to provide individualized fin=
+ancial advise. This email is not financial advice and any investment decisi=
+on you make is solely your responsibility.<br style=3D"box-sizing: border-b=
+ox;"><br style=3D"box-sizing: border-box;">This editorial email with educat=
+ional news was sent to afowlk1@gmail.com.<br style=3D"box-sizing: border-bo=
+x;"> <a href=3D"https://links.from.smarttradersgeneration.com/e/encryptedUn=
+subscribe?_r=3D7e9644fbf6c24786a724656d236247ae&_s=3D48a90d73659a4c7c839088=
+9c70e7dc94&_t=3Duc8Zq1o1vsHvAkL-BsFXGQEBlgFvFzeZgBLcOSBQ3fLHcLAdsse32VPAgI8=
+rdyO2KhDeJpBNwSPB6R4SDjV0OcCWxBU7aCon4IEqfljGoV0%3D" target=3D"_blank" styl=
+e=3D"box-sizing: border-box; text-decoration: underline; color: #dee9ff;" r=
+el=3D"noopener">Unsubscribe</a> to stop receiving marketing communication f=
+rom us.<br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: borde=
+r-box;"> Feel free to contact us toll free Domestic/International: <a targe=
+t=3D"_blank" delay=3D"150" href=3D"tel:+13024463628" rel=3D"noopener norefe=
+rrer" style=3D"box-sizing: border-box; text-decoration: underline; color: #=
+dee9ff;">+13024463628</a> Mon=E2=80=93Fri, 9am=E2=80=935pm ET, or email us =
+<a href=3D"mailto:support@smarttradersgeneration.com" target=3D"_blank" rel=
+=3D"noopener" style=3D"box-sizing: border-box; text-decoration: underline; =
+color: #dee9ff;">support@smarttradersgeneration.com</a></p><p style=3D"box-=
+sizing: border-box; line-height: inherit; margin: 0; margin-bottom: 0;"><br=
+ style=3D"box-sizing: border-box;">600 N Broad St Ste 5 PMB 1 Middletown, D=
+E 19709</p><p style=3D"box-sizing: border-box; line-height: inherit; margin=
+: 0; margin-bottom: 0;"><br style=3D"box-sizing: border-box;">Inception Med=
+ia, LLC. All rights reserved</p><p style=3D"box-sizing: border-box; line-he=
+ight: inherit; margin: 0;"><br style=3D"box-sizing: border-box;"><strong st=
+yle=3D"box-sizing: border-box;"><a href=3D"https://links.from.smarttradersg=
+eneration.com/u/click?_t=3D7e9644fbf6c24786a724656d236247ae&_m=3D48a90d7365=
+9a4c7c8390889c70e7dc94&_e=3DQahWzg_7A5JR7VRY4SwmAOIm-brQPTATbklcWp1nukWZ5a5=
+7MASS3mFweHiiGUeAjbl54lGatJxYB4gSLbJxFUrFNDBz_7Jb8HJMYrg33wp0KOrD84ctRtMIQ3=
+bE2BVnE2yAuz4ZBp3WiTa10fmKIpmpXfPULB6YuRw_D-Gs6wM2ByoIlNwToTdFQVP5Q8tgNAf3v=
+e9H-DvM-e_r2-nVfoQsBlGL5oKvzRoTbiVUpgk%3D" target=3D"_blank" style=3D"box-s=
+izing: border-box; text-decoration: underline; color: #dee9ff;" rel=3D"noop=
+ener">Privacy Policy</a></strong></p></div></td></tr></table></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table><!-- End --=
+> </body></html>
+------=_Part_418777_165999179.1747665732493--
