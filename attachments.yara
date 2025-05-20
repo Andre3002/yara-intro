@@ -1,6 +1,6 @@
 /* 
 This rule checks if email has an attachment
-To run on all files in a folder:  
+To run on all files in a folder (MSI):  
 yara64 attachments.yara "C:\Users\andre\Repos\yara-intro\Emails\"
 */
 

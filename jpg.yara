@@ -1,6 +1,6 @@
 /* 
 This rule checks the file signature to see if a file is a jpg
-To run on all files in a folder:  yara64 jpg.yara "C:\Users\andre\Yara_Rules\Emails\TestPic.jpg"
+To run on all files in a folder (LENOVO):  yara64 jpg.yara "C:\Users\andre\Yara_Rules\Emails\"
 */
 
 rule jpg_file_found
