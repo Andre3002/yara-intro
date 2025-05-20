@@ -1,5 +1,5 @@
 /*
-Determines if email contains keywords associated with spam with passing email authentication
+Determines if email contains spam keywords and passes email auth
 To run on all files in a folder (MSI):  
 yara64 spam_test.yara "C:\Users\andre\Repos\yara-intro\Emails\"
 */
